@@ -1,5 +1,8 @@
 import kaplay from "https://unpkg.com/kaplay@3001.0.19/dist/kaplay.mjs";
-//import { base } from "./scenes/scene1";
+export {
+    leftbase,
+}
+
 kaplay();
 
 
@@ -12,31 +15,6 @@ loadSprite('openChest',"./assets/chestOpen.png")
 loadSprite('star',"./assets/star.png")
 
 setBackground(BLACK)
-
-var GOTSPECIALITEM = 0;
-
-scene('base', () => {
-    add([
-        sprite('bg-base')
-    ]);
-
-    const leftArrow = add([
-        sprite('arrow',{
-            flipX: true
-        }),
-        pos(30,300),
-        area()
-    ]);
-
-    const rightArrow = add([
-        sprite('arrow'),
-        pos(950,300),
-        area()
-    ]);
-
-    leftArrow.onClick(() => (go('leftbase')))
-
-});
 
 scene('leftbase', () => {
     add([
@@ -97,5 +75,3 @@ scene('leftbase', () => {
         ])
     });
 });
-
-go('base');
