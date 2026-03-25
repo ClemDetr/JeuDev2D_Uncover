@@ -3,7 +3,7 @@ import kaplay from "https://unpkg.com/kaplay@3001.0.19/dist/kaplay.mjs";
 kaplay();
 
 
-"Sprites load"
+//Sprites Loads
 loadSprite('bg-base',"./assets/battleback10.png")
 loadSprite('arrow',"./assets/arrow.png")
 loadSprite('parrot',"./assets/parrot.png")
@@ -13,11 +13,12 @@ loadSprite('star',"./assets/star.png")
 
 setBackground(BLACK)
 
-var GOTSPECIALITEM = 0;
+let GOTSPECIALITEM = false;
 
 scene('base', () => {
     add([
         sprite('bg-base')
+        
     ]);
 
     const leftArrow = add([
@@ -33,6 +34,13 @@ scene('base', () => {
         pos(950,300),
         area()
     ]);
+
+    if (GOTSPECIALITEM == true) {
+        const specialItem = add([
+            sprite('star'),
+            pos(0,0),
+        ])
+    };
 
     leftArrow.onClick(() => (go('leftbase')))
 
@@ -67,7 +75,13 @@ scene('leftbase', () => {
         area()
     ]);
 
-
+    if (GOTSPECIALITEM == true) {
+        const specialItem = add([
+            sprite('star'),
+            pos(0,0),
+        ])
+        chest.sprite = 'openChest'
+    }
     rightArrow.onClick(() =>(go('base')));
 
     parrot.onClick(() => {
@@ -90,12 +104,14 @@ scene('leftbase', () => {
 
     chest.onClick(() => {
         chest.sprite = 'openChest',
-        GOTSPECIALITEM = 1;
+        GOTSPECIALITEM = true;
         const specialItem = add([
             sprite('star'),
-            pos(0,0)
+            pos(0,0),
         ])
     });
 });
+
+scene('rightbase')
 
 go('base');
