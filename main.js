@@ -10,15 +10,17 @@ loadSprite('parrot',"./assets/parrot.png")
 loadSprite('chest',"./assets/chest.png")
 loadSprite('openChest',"./assets/chestOpen.png")
 loadSprite('star',"./assets/star.png")
+loadSprite('EM',"./assets/253-EM.JPG")
+loadSprite('Mus1',"./assets/254-Mus1.JPG")
 
 setBackground(BLACK)
 
 let GOTSPECIALITEM = false;
 
-scene('base', () => {
+scene('EM', () => {
     add([
-        sprite('bg-base')
-        
+        sprite('EM'),
+        scale(0.3)
     ]);
 
     const leftArrow = add([
@@ -42,15 +44,14 @@ scene('base', () => {
         ])
     };
 
-    leftArrow.onClick(() => (go('leftbase')))
+    rightArrow.onClick(() => (go('Mus1')))
 
 });
 
-scene('leftbase', () => {
+scene('Mus1', () => {
     add([
-        sprite('bg-base', {
-            flipX:true
-        })
+        sprite('Mus1'),
+        scale(0.3)
     ]);
 
 
@@ -82,7 +83,7 @@ scene('leftbase', () => {
         ])
         chest.sprite = 'openChest'
     }
-    rightArrow.onClick(() =>(go('base')));
+    rightArrow.onClick(() =>(go('EM')));
 
     parrot.onClick(() => {
         const backtext = add([
@@ -114,4 +115,4 @@ scene('leftbase', () => {
 
 scene('rightbase')
 
-go('base');
+go('EM');
