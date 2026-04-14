@@ -24,29 +24,24 @@ scene('EM', () => {
         scale(0.3)
     ]);
 
-    const leftArrow = add([
-        sprite('arrow',{
-            flipX: true
-        }),
-        pos(30,300),
+    const toRP = add([
+        rect(80,300),
+        pos(0,height()/2),
+        color(0,100,0),
         area()
     ]);
 
-    const rightArrow = add([
-        sprite('arrow'),
-        pos(950,300),
+    const toMus1 = add([
+        rect(150,250),
+        color(0,100,0),
+        pos(850,400),
         area()
     ]);
 
-    if (GOTSPECIALITEM == true) {
-        const specialItem = add([
-            sprite('star'),
-            pos(0,0),
-        ])
-    };
-
-    rightArrow.onClick(() => (go('Mus1')));
-    leftArrow.onClick(() => (go('RP')));
+    
+    //toMus1.onHoverUpdate(() => )
+    toMus1.onClick(() => (go('Mus1')));
+    toRP.onClick(() => (go('RP')));
 });
 
 scene('Mus1', () => {
@@ -59,8 +54,9 @@ scene('Mus1', () => {
     
 
     const arrow = add([
-        sprite('arrow'),
-        pos(950,300),
+        rect(800,80),
+        color(0,100,0),
+        pos(100,700),
         area()
     ]);
 
