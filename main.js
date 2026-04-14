@@ -1,6 +1,9 @@
 import kaplay from "https://unpkg.com/kaplay@3001.0.19/dist/kaplay.mjs";
 //import { base } from "./scenes/scene1";
-kaplay();
+kaplay({
+    width : innerWidth,
+    height : innerHeight
+});
 
 
 //Sprites Loads
@@ -16,16 +19,18 @@ loadSprite('RP',"./assets/252-RP.JPG")
 
 setBackground(BLACK)
 
-let GOTSPECIALITEM = false;
 
 scene('EM', () => {
     add([
-        sprite('EM'),
-        scale(0.3)
+        sprite('EM',{
+            width : width(),
+            height : height()
+        }),
     ]);
 
     const toRP = add([
-        rect(80,300),
+        rect(width()/10,height()/2),
+        anchor("center"),
         pos(0,height()/2),
         color(0,100,0),
         area()
@@ -34,7 +39,8 @@ scene('EM', () => {
     const toMus1 = add([
         rect(150,250),
         color(0,100,0),
-        pos(850,400),
+        anchor("center"),
+        pos(width()*0.66,height()*0.69),
         area()
     ]);
 
@@ -46,17 +52,20 @@ scene('EM', () => {
 
 scene('Mus1', () => {
     add([
-        sprite('Mus1'),
-        scale(0.3)
+        sprite('Mus1',{
+            width : width(),
+            height : height()
+        })
     ]);
 
 
     
 
     const arrow = add([
-        rect(800,80),
+        rect(800,150),
         color(0,100,0),
-        pos(100,700),
+        anchor("center"),
+        pos(width()*0.5,height()*0.9),
         area()
     ]);
 
@@ -80,7 +89,8 @@ scene('RP', () => {
         area()
     ]);
 
+    onClick(() =>(console.log(width(),height(),mousePos())))
     leftArrow.onClick(() => (go('EM')));
 });
 
-go('EM');
+go('Mus1');
