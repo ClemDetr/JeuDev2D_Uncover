@@ -8,11 +8,6 @@ kaplay({
 
 //Sprites Loads
 loadSprite('OF',"./assets/249-OF.JPG")
-loadSprite('arrow',"./assets/arrow.png")
-loadSprite('parrot',"./assets/parrot.png")
-loadSprite('chest',"./assets/chest.png")
-loadSprite('openChest',"./assets/chestOpen.png")
-loadSprite('star',"./assets/star.png")
 loadSprite('EM',"./assets/253-EM.JPG")
 loadSprite('Mus1',"./assets/254-Mus1.JPG")
 loadSprite('RP',"./assets/252-RP.JPG")
@@ -76,7 +71,6 @@ scene('Mus1', () => {
     ]);
 
     
-    //onUpdate(() => setCursor("default"))
     toEM.onHover(() => setCursor("crosshair"))
     toEM.onHoverEnd(() => setCursor("default"))
     toEM.onClick(() =>(go('EM')));
@@ -100,11 +94,47 @@ scene('RP', () => {
         area()
     ]);
 
+
+    const toOF = add([
+        rect(width()*0.2,height()*0.2),
+        anchor("center"),
+        pos(width()*0.9,height()*0.5),
+        area()
+    ]);
+
+
     onClick(() =>(console.log(width(),height(),mousePos())))
-    
+
     toEM.onHover(() => setCursor("crosshair"))
     toEM.onHoverEnd(() => setCursor("default"))
     toEM.onClick(() => (go('EM')));
+
+    toOF.onHover(() => setCursor("crosshair"))
+    toOF.onHoverEnd(() => setCursor("default"))
+    toOF.onClick(() => (go('OF')));
+});
+
+scene('OF', () => {
+    add([
+        sprite('OF',{
+            width : width(),
+            height : height()
+        })
+    ]);
+    setCursor("default")
+
+    const toRP = add([
+        rect(width()*0.8,height()*0.2,{
+            fill : false
+        }),
+        anchor("center"),
+        pos(width()*0.5,height()*0.9),
+        area()
+    ]);
+
+    toRP.onHover(() => setCursor("crosshair"))
+    toRP.onHoverEnd(() => setCursor("default"))
+    toRP.onClick(() =>(go('RP')));
 });
 
 go('RP');
