@@ -27,6 +27,7 @@ scene('EM', () => {
             height : height()
         }),
     ]);
+    setCursor("default")
 
     const toRP = add([
         rect(width()/10,height()/2),
@@ -45,8 +46,12 @@ scene('EM', () => {
     ]);
 
     
-    //toMus1.onHoverUpdate(() => )
+    toMus1.onHover(() => setCursor("crosshair"))
+    toMus1.onHoverEnd(() => setCursor("default"))
     toMus1.onClick(() => (go('Mus1')));
+
+    toRP.onHover(() => setCursor("crosshair"))
+    toRP.onHoverEnd(() => setCursor("default"))
     toRP.onClick(() => (go('RP')));
 });
 
@@ -57,40 +62,49 @@ scene('Mus1', () => {
             height : height()
         })
     ]);
-
+    setCursor("default")
 
     
 
-    const arrow = add([
-        rect(800,150),
-        color(0,100,0),
+    const toEM = add([
+        rect(width()*0.8,height()*0.2,{
+            fill : false
+        }),
         anchor("center"),
         pos(width()*0.5,height()*0.9),
         area()
     ]);
 
     
-    
-    arrow.onClick(() =>(go('EM')));
+    //onUpdate(() => setCursor("default"))
+    toEM.onHover(() => setCursor("crosshair"))
+    toEM.onHoverEnd(() => setCursor("default"))
+    toEM.onClick(() =>(go('EM')));
 
 });
 
 scene('RP', () => {
     add([
-        sprite('RP'),
-        scale(0.3)
+        sprite('RP',{
+            width : width(),
+            height : height()
+        })
     ]);
+    setCursor("default")
 
-    const leftArrow = add([
-        sprite('arrow',{
-            flipX: true
-        }),
-        pos(30,300),
+
+    const toEM = add([
+        rect(width()*0.2,height()*0.2),
+        anchor("center"),
+        pos(width()*0.05,height()*0.45),
         area()
     ]);
 
     onClick(() =>(console.log(width(),height(),mousePos())))
-    leftArrow.onClick(() => (go('EM')));
+    
+    toEM.onHover(() => setCursor("crosshair"))
+    toEM.onHoverEnd(() => setCursor("default"))
+    toEM.onClick(() => (go('EM')));
 });
 
-go('Mus1');
+go('RP');
