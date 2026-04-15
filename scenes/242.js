@@ -23,6 +23,10 @@ function init() {
         area()
     ]);
 
+    to248.onHover(() => setCursor("crosshair"))
+    to248.onHoverEnd(() => setCursor("default"))
+    to248.onClick(() =>(go('248')));
+
     const to244 = add([
         rect(width()*0.2,height()*0.1,{
             fill : true
@@ -31,6 +35,10 @@ function init() {
         pos(width()*0.7,height()*0.558),
         area()
     ]);
+
+    to244.onHover(() => setCursor("crosshair"))
+    to244.onHoverEnd(() => setCursor("default"))
+    to244.onClick(() =>(go('244')));
 
     const toLizard = add([
         rect(width()*0.06,height()*0.06,{
@@ -41,18 +49,11 @@ function init() {
         area()
     ]);
 
-    onClick(() =>(console.log(width(),height(),mousePos())))
-    to248.onHover(() => setCursor("crosshair"))
-    to248.onHoverEnd(() => setCursor("default"))
-    to248.onClick(() =>(go('248')));
-
-    to244.onHover(() => setCursor("crosshair"))
-    to244.onHoverEnd(() => setCursor("default"))
-    to244.onClick(() =>(go('244')));
-
     toLizard.onHover(() => setCursor("crosshair"))
     toLizard.onHoverEnd(() => setCursor("default"))
-    toLizard.onClick(() =>(go('Lizard2')));
+    toLizard.onClick(() =>(go('lizard2')));
+
+    
     
 });
 }

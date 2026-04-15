@@ -33,6 +33,8 @@ import * as scene234 from "./scenes/234.js";
 import * as scene235 from "./scenes/235.js";
 import * as scene236 from "./scenes/236.js";
 import * as scene239 from "./scenes/239.js";
+import * as lizard from "./scenes/lizard.js";
+import * as lizard2 from "./scenes/lizard2.js";
 
 // Initialize KAPLAY
 kaplay({
@@ -75,6 +77,8 @@ scene234.init();
 scene235.init();
 scene236.init();
 scene239.init();
+lizard.init();
+lizard2.init();
 
 
 // Start the game with go('EM')

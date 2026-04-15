@@ -32,6 +32,10 @@ function init() {
         area()
     ]);
 
+    to242.onHover(() => setCursor("crosshair"))
+    to242.onHoverEnd(() => setCursor("default"))
+    to242.onClick(() =>(go('242')));
+
     const toPanC = add([
         rect(width()*0.02,height()*0.05,{
             fill : false
@@ -55,9 +59,7 @@ function init() {
     toOF.onHoverEnd(() => setCursor("default"))
     toOF.onClick(() =>(go('OF')));
 
-    to242.onHover(() => setCursor("crosshair"))
-    to242.onHoverEnd(() => setCursor("default"))
-    to242.onClick(() =>(go('242')));
+    
 
     toPanC.onHover(() => setCursor("crosshair"))
     toPanC.onHoverEnd(() => setCursor("default"))
