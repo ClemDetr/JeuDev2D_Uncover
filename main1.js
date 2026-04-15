@@ -8,6 +8,9 @@ import * as OF from "./scenes/OF.js";
 import * as LunC from "./scenes/LunC.js";
 import * as PanC from "./scenes/PanC.js";
 import * as RP from "./scenes/RP.js";
+import * as scene242 from "./scenes/242.js";
+import * as scene244 from "./scenes/244.js";
+
 
 // Initialize KAPLAY
 kaplay({
@@ -25,6 +28,9 @@ PanA.init();
 LunC.init();
 PanC.init();
 RP.init();
+scene242.init();
+scene244.init();
+
 
 // Start the game with scene1
-go('Mus1');
+go('248');

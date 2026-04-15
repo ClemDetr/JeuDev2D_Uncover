@@ -23,6 +23,15 @@ function init() {
         area()
     ]);
 
+    const to242 = add([
+        rect(width()*0.3,height()*0.3,{
+            fill : false
+        }),
+        anchor("center"),
+        pos(width()*0.2,height()*0.55),
+        area()
+    ]);
+
     const toPanC = add([
         rect(width()*0.02,height()*0.05,{
             fill : false
@@ -41,10 +50,14 @@ function init() {
         area()
     ]);
 
-    onClick(() =>(console.log(width(),height(),mousePos())))
+    
     toOF.onHover(() => setCursor("crosshair"))
     toOF.onHoverEnd(() => setCursor("default"))
     toOF.onClick(() =>(go('OF')));
+
+    to242.onHover(() => setCursor("crosshair"))
+    to242.onHoverEnd(() => setCursor("default"))
+    to242.onClick(() =>(go('242')));
 
     toPanC.onHover(() => setCursor("crosshair"))
     toPanC.onHoverEnd(() => setCursor("default"))
