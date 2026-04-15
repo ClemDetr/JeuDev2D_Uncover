@@ -14,8 +14,8 @@ loadSprite('RP',"./assets/252-RP.JPG")
 loadSprite('panA',"./assets/250-panA.JPG")
 loadSprite('lunA',"./assets/251-lunA.JPG")
 loadSprite('248',"./assets/248.JPG")
-loadSprite('panB',"./assets/246-panB.JPG")
-loadSprite('lunB',"./assets/247-lunB.JPG")
+loadSprite('panC',"./assets/240-panC.JPG")
+loadSprite('lunC',"./assets/241-lunC.JPG")
 
 setBackground(BLACK)
 
@@ -145,7 +145,7 @@ scene('OF', () => {
 
     const to248 = add([
         rect(width()*0.3,height()*0.2,{
-            fill : true
+            fill : false
         }),
         anchor("center"),
         pos(width()*0.6,height()*0.55),
@@ -154,7 +154,7 @@ scene('OF', () => {
 
     const toPanA = add([
         rect(width()*0.09,height()*0.2,{
-            fill : true
+            fill : false
         }),
         anchor("center"),
         pos(width()*0.2,height()*0.65),
@@ -163,7 +163,7 @@ scene('OF', () => {
 
     const toLunA = add([
         rect(width()*0.09,height()*0.4,{
-            fill : true
+            fill : false
         }),
         anchor("center"),
         pos(width()*0.3,height()*0.65),
@@ -245,28 +245,28 @@ scene('248', () => {
 
     const toOF = add([
         rect(width()*0.8,height()*0.2,{
-            fill : true
+            fill : false
         }),
         anchor("center"),
         pos(width()*0.5,height()*0.9),
         area()
     ]);
 
-    const toPanB = add([
+    const toPanC = add([
         rect(width()*0.02,height()*0.05,{
-            fill : true
+            fill : false
         }),
         anchor("center"),
         pos(width()*0.628,height()*0.558),
         area()
     ]);
 
-    const toLunB = add([
+    const toLunC = add([
         rect(width()*0.016,height()*0.06,{
-            fill : true
+            fill : false
         }),
         anchor("center"),
-        pos(width()*0.597,height()*0.547),
+        pos(width()*0.599,height()*0.547),
         area()
     ]);
 
@@ -275,18 +275,18 @@ scene('248', () => {
     toOF.onHoverEnd(() => setCursor("default"))
     toOF.onClick(() =>(go('OF')));
 
-    toPanB.onHover(() => setCursor("crosshair"))
-    toPanB.onHoverEnd(() => setCursor("default"))
-    toPanB.onClick(() =>(go('panB')));
+    toPanC.onHover(() => setCursor("crosshair"))
+    toPanC.onHoverEnd(() => setCursor("default"))
+    toPanC.onClick(() =>(go('panC')));
 
-    toLunB.onHover(() => setCursor("crosshair"))
-    toLunB.onHoverEnd(() => setCursor("default"))
-    toLunB.onClick(() =>(go('lunB')));
+    toLunC.onHover(() => setCursor("crosshair"))
+    toLunC.onHoverEnd(() => setCursor("default"))
+    toLunC.onClick(() =>(go('lunC')));
 });
 
-scene('panB', () =>{
+scene('panC', () =>{
     add([
-        sprite('panB',{
+        sprite('panC',{
             width : width(),
             height : height()
         })
@@ -307,9 +307,9 @@ scene('panB', () =>{
     to248.onClick(() => (go('248')));
 });
 
-scene('lunB', () =>{
+scene('lunC', () =>{
     add([
-        sprite('lunB',{
+        sprite('lunC',{
             width : width(),
             height : height()
         })
