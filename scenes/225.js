@@ -29,7 +29,7 @@ function init() {
 
         const to244 = add([
             rect(width()*0.3,height()*0.3,{
-                fill : true
+                fill : false
             }),
             anchor("center"),
             pos(width()*0.5,height()*0.6),
@@ -39,5 +39,18 @@ function init() {
         to244.onHover(() => setCursor("crosshair"))
         to244.onHoverEnd(() => setCursor("default"))
         to244.onClick(() =>(go('244')));
+
+        const to224 = add([
+            rect(width()*0.8,height()*0.2,{
+            fill : false
+            }),
+            anchor("center"),
+            pos(width()*0.5,height()*0.9),
+            area()
+        ]);
+
+        to224.onHover(() => setCursor("crosshair"))
+        to224.onHoverEnd(() => setCursor("default"))
+        to224.onClick(() =>(go('224')));
     })
 }

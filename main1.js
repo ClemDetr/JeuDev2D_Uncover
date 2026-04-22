@@ -82,4 +82,4 @@ lizard2.init();
 
 
 // Start the game with go('EM')
-go('248');
+go('217');

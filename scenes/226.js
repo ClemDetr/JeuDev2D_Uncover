@@ -12,6 +12,7 @@ function init() {
                 height : height()
             })
         ]);
+        setCursor("default")
 
         const to225 = add([
             rect(width()*0.8,height()*0.2,{
@@ -25,5 +26,18 @@ function init() {
         to225.onHover(() => setCursor("crosshair"))
         to225.onHoverEnd(() => setCursor("default"))
         to225.onClick(() =>(go('225')));
+
+        const to227 = add([
+            rect(width()*0.2,height()*0.8,{
+            fill : false
+            }),
+            anchor("center"),
+            pos(width()*0.9,height()*0.5),
+            area()
+        ]);
+
+        to227.onHover(() => setCursor("crosshair"))
+        to227.onHoverEnd(() => setCursor("default"))
+        to227.onClick(() =>(go('227')));
     })
 }
