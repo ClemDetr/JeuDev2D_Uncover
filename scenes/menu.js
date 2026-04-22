@@ -21,7 +21,7 @@ function init() {
         menu.add([
             text("les zones cliquables change ton curseur en croix !"),
             anchor("center"),
-            pos(width()*0.6,height()*0.5)
+            pos(width()*0.5,height()*0.6)
         ])
         setCursor("crosshair")
 

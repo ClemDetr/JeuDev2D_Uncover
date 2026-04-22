@@ -62,8 +62,7 @@ function init() {
             area()
         ]);
 
-        onClick(() => console.log(width(),height(),mousePos()))
-
+        
         toLunD.onHover(() => setCursor("crosshair"))
         toLunD.onHoverEnd(() => setCursor("default"))
         toLunD.onClick(() =>(go('lunD')));

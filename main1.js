@@ -84,4 +84,4 @@ menu.init();
 
 
 // Start the game with go('menu')
-go('231');
+go('menu');
