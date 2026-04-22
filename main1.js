@@ -26,7 +26,6 @@ import * as LunD from "./scenes/LunD.js";
 import * as LunE from "./scenes/LunE.js";
 import * as scene227 from "./scenes/227.js";
 import * as scene228 from "./scenes/228.js";
-import * as scene229 from "./scenes/229.js";
 import * as scene230 from "./scenes/230.js";
 import * as scene231 from "./scenes/231.js";
 import * as scene234 from "./scenes/234.js";
@@ -42,6 +41,17 @@ kaplay({
     width : innerWidth,
     height : innerHeight
 });
+
+
+//variable globale
+let invtry = [];
+onUpdate(() =>{
+    if (invtry.length > 0){
+        text("Tu possèdes" + inventory[0])
+        pos(0,0)
+    }
+})
+
 
 // Initialize scenes
 Mus1.init();
@@ -71,7 +81,6 @@ LunE.init();
 LunD.init();
 scene227.init();
 scene228.init();
-scene229.init();
 scene230.init();
 scene231.init();
 scene234.init();
@@ -84,4 +93,4 @@ menu.init();
 
 
 // Start the game with go('menu')
-go('menu');
+go('230');

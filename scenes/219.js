@@ -5,7 +5,12 @@ export{
 
 function init() {
     loadSprite('219',"./assets/219.JPG")
-    loadSprite('arche',"./assets/arche.png")
+    loadSprite('arche',"./assets/arche.png",{
+                sliceX : 2,
+                anims:{
+                    "open":{from: 0, to: 1}
+                }
+            })
     scene('219', () => {
         add([
             

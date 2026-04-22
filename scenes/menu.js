@@ -5,6 +5,8 @@ export{
 
 function init() {
     loadSprite('EM',"./assets/253-EM.JPG")
+    
+    
     scene('menu', () => {
         const menu = add([
             sprite('EM',{

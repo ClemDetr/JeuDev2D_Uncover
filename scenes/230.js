@@ -29,7 +29,7 @@ function init() {
 
         const tolizard = add([
             rect(width()*0.09,height()*0.2,{
-                fill : true
+                fill : false
             }),
             anchor("center"),
             pos(width()*0.3,height()*0.744),
