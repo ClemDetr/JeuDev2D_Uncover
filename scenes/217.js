@@ -17,7 +17,7 @@ function init() {
 
         const to220 = add([
             rect(width()*0.2,height()*0.3,{
-                fill : true
+                fill : false
             }),
             anchor("center"),
             pos(width()*0.2,height()*0.45),

@@ -16,7 +16,7 @@ function init() {
 
     const to242 = add([
         rect(width()*0.2,height()*0.2,{
-            fill : true
+            fill : false
         }),
         anchor("center"),
         pos(width()*0.2,height()*0.5),
@@ -27,14 +27,14 @@ function init() {
 
     const to225 = add([
         rect(width()*0.8,height()*0.2,{
-            fill : true
+            fill : false
         }),
         anchor("center"),
         pos(width()*0.5,height()*0.9),
         area()
     ]);
 
-    onClick(() =>(console.log(width(),height(),mousePos())))
+    
     
 
     to242.onHover(() => setCursor("crosshair"))

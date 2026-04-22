@@ -5,12 +5,26 @@ export{
 
 function init() {
     loadSprite('PanD',"./assets/237-panD.JPG")
-    scene('PanD', () => {
+    scene('panD', () => {
         add([
-        sprite('PanD',{
-            width : width(),
-            height : height()
-        })
-    ]);
+            sprite('PanD',{
+                width : width(),
+                height : height()
+            })
+        ]);
+        setCursor("default")
+
+        const to239 = add([
+            rect(width()*0.7,height()*0.2,{
+            fill : false
+            }),
+            anchor("center"),
+            pos(width()*0.5,height()),
+            area()
+        ]);
+
+        to239.onHover(() => setCursor("crosshair"))
+        to239.onHoverEnd(() => setCursor("default"))
+        to239.onClick(() =>(go('239')));
     })
 }

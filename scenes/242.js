@@ -29,7 +29,7 @@ function init() {
 
     const to244 = add([
         rect(width()*0.2,height()*0.1,{
-            fill : true
+            fill : false
         }),
         anchor("center"),
         pos(width()*0.7,height()*0.558),
@@ -42,7 +42,7 @@ function init() {
 
     const toLizard = add([
         rect(width()*0.06,height()*0.06,{
-            fill : true
+            fill : false
         }),
         anchor("center"),
         pos(width()*0.2,height()*0.547),
