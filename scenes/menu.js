@@ -14,14 +14,20 @@ function init() {
             area()
         ]);
         menu.add([
-            text("Clique n'importe où pour commencer !"),
+            text("Clique n'importe où pour commencer !",{
+                size : height()*0.07,
+                width : width()*0.7
+            }),
             anchor("center"),
-            pos(width()*0.5,height()*0.5)
+            pos(width()*0.7,height()*0.3)
         ])
         menu.add([
-            text("les zones cliquables change ton curseur en croix !"),
+            text("les zones cliquables change ton curseur en croix !",{
+                size : height()*0.03,
+                width : width()*0.7
+            }),
             anchor("center"),
-            pos(width()*0.5,height()*0.6)
+            pos(width()*0.7,height()*0.5)
         ])
         setCursor("crosshair")
 

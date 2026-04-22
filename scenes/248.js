@@ -36,6 +36,19 @@ function init() {
     to242.onHoverEnd(() => setCursor("default"))
     to242.onClick(() =>(go('242')));
 
+    const to239 = add([
+        rect(width()*0.3,height()*0.2,{
+            fill : false
+        }),
+        anchor("center"),
+        pos(width()*0.8,height()*0.558),
+        area()
+    ]);
+
+    to239.onHover(() => setCursor("crosshair"))
+    to239.onHoverEnd(() => setCursor("default"))
+    to239.onClick(() =>(go('239')));
+
     const toPanC = add([
         rect(width()*0.02,height()*0.05,{
             fill : false
