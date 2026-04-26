@@ -1,333 +1,106 @@
 import kaplay from "https://unpkg.com/kaplay@3001.0.19/dist/kaplay.mjs";
-//import { base } from "./scenes/scene1";
+
+import * as Mus1 from "./scenes/Mus1.js";
+import * as EM from "./scenes/EM.js";
+import * as scene248 from "./scenes/248.js";
+import * as LunA from "./scenes/LunA.js";
+import * as PanA from "./scenes/PanA.js";
+import * as OF from "./scenes/OF.js";
+import * as LunC from "./scenes/LunC.js";
+import * as PanC from "./scenes/PanC.js";
+import * as RP from "./scenes/RP.js";
+import * as scene242 from "./scenes/242.js";
+import * as scene244 from "./scenes/244.js";
+import * as scene225 from "./scenes/225.js";
+import * as scene226 from "./scenes/226.js";
+import * as scene224 from "./scenes/224.js";
+import * as scene223 from "./scenes/223.js";
+import * as scene222 from "./scenes/222.js";
+import * as scene221 from "./scenes/221.js";
+import * as scene220 from "./scenes/220.js";
+import * as scene219 from "./scenes/219.js";
+import * as PanF from "./scenes/PanF.js";
+import * as scene217 from "./scenes/217.js";
+import * as PanE from "./scenes/PanE.js";
+import * as PanD from "./scenes/PanD.js";
+import * as LunD from "./scenes/LunD.js";
+import * as LunE from "./scenes/LunE.js";
+import * as scene227 from "./scenes/227.js";
+import * as scene228 from "./scenes/228.js";
+import * as scene230 from "./scenes/230.js";
+import * as scene231 from "./scenes/231.js";
+import * as scene234 from "./scenes/234.js";
+import * as scene235 from "./scenes/235.js";
+import * as scene236 from "./scenes/236.js";
+import * as scene239 from "./scenes/239.js";
+import * as lizard from "./scenes/lizard.js";
+import * as lizard2 from "./scenes/lizard2.js";
+import * as past0 from "./scenes/past0.js";
+import * as menu from "./scenes/menu.js";
+
+// Initialize KAPLAY
 kaplay({
     width : innerWidth,
     height : innerHeight
 });
 
 
-//Sprites Loads
-loadSprite('OF',"./assets/249-OF.JPG")
-loadSprite('EM',"./assets/253-EM.JPG")
-loadSprite('Mus1',"./assets/254-Mus1.JPG")
-loadSprite('RP',"./assets/252-RP.JPG")
-loadSprite('panA',"./assets/250-panA.JPG")
-loadSprite('lunA',"./assets/251-lunA.JPG")
-loadSprite('248',"./assets/248.JPG")
-loadSprite('panC',"./assets/240-panC.JPG")
-loadSprite('lunC',"./assets/241-lunC.JPG")
-
-setBackground(BLACK)
-
-
-scene('EM', () => {
-    add([
-        sprite('EM',{
-            width : width(),
-            height : height()
-        }),
-    ]);
-    setCursor("default")
-
-    const toRP = add([
-        rect(width()/10,height()/2,{
-            fill : false
-        }),
-        anchor("center"),
-        pos(0,height()/2),
-        area()
-    ]);
-
-    const toMus1 = add([
-        rect(width()*0.14,height()*0.37,{
-            fill : false
-        }),
-        anchor("center"),
-        pos(width()*0.66,height()*0.69),
-        area()
-    ]);
-
-    
-    toMus1.onHover(() => setCursor("crosshair"))
-    toMus1.onHoverEnd(() => setCursor("default"))
-    toMus1.onClick(() => (go('Mus1')));
-
-    toRP.onHover(() => setCursor("crosshair"))
-    toRP.onHoverEnd(() => setCursor("default"))
-    toRP.onClick(() => (go('RP')));
-});
-
-scene('Mus1', () => {
-    add([
-        sprite('Mus1',{
-            width : width(),
-            height : height()
-        })
-    ]);
-    setCursor("default")
-
-    
-
-    const toEM = add([
-        rect(width()*0.8,height()*0.2,{
-            fill : false
-        }),
-        anchor("center"),
-        pos(width()*0.5,height()*0.9),
-        area()
-    ]);
-
-    
-    toEM.onHover(() => setCursor("crosshair"))
-    toEM.onHoverEnd(() => setCursor("default"))
-    toEM.onClick(() =>(go('EM')));
-
-});
-
-scene('RP', () => {
-    add([
-        sprite('RP',{
-            width : width(),
-            height : height()
-        })
-    ]);
-    setCursor("default")
+//variable globale
+export const invtry = {
+    key_arche : false,
+    key_domus : false,
+}
+onUpdate(() =>{
+    if (invtry.key_arche){
+        text("Tu possèdes une clé d'arche.")
+        pos(0,0)
+    }
+    if (invtry.key_domus) {
+        text("Tu possèdes une clé de maison.")
+        pos(0,0)
+    }
+})
 
 
-    const toEM = add([
-        rect(width()*0.2,height()*0.2,{
-            fill : false
-        }),
-        anchor("center"),
-        pos(width()*0.05,height()*0.45),
-        area()
-    ]);
+// Initialize scenes
+Mus1.init();
+EM.init();
+scene248.init();
+LunA.init();
+OF.init();
+PanA.init();
+LunC.init();
+PanC.init();
+RP.init();
+scene242.init();
+scene244.init();
+scene217.init();
+scene219.init();
+scene220.init();
+scene221.init();
+scene222.init();
+scene223.init();
+scene224.init();
+scene225.init();
+scene226.init();
+PanF.init();
+PanD.init();
+PanE.init();
+LunE.init();
+LunD.init();
+scene227.init();
+scene228.init();
+scene230.init();
+scene231.init();
+scene234.init();
+scene235.init();
+scene236.init();
+scene239.init();
+lizard.init();
+lizard2.init();
+past0.init();
+menu.init();
 
 
-    const toOF = add([
-        rect(width()*0.2,height()*0.2,{
-            fill : false
-        }),
-        anchor("center"),
-        pos(width()*0.9,height()*0.5),
-        area()
-    ]);
-
-
-    
-
-    toEM.onHover(() => setCursor("crosshair"))
-    toEM.onHoverEnd(() => setCursor("default"))
-    toEM.onClick(() => (go('EM')));
-
-    toOF.onHover(() => setCursor("crosshair"))
-    toOF.onHoverEnd(() => setCursor("default"))
-    toOF.onClick(() => (go('OF')));
-});
-
-scene('OF', () => {
-    add([
-        sprite('OF',{
-            width : width(),
-            height : height()
-        })
-    ]);
-    setCursor("default")
-
-    const toRP = add([
-        rect(width()*0.8,height()*0.2,{
-            fill : false
-        }),
-        anchor("center"),
-        pos(width()*0.5,height()*0.9),
-        area()
-    ]);
-
-    const to248 = add([
-        rect(width()*0.3,height()*0.2,{
-            fill : false
-        }),
-        anchor("center"),
-        pos(width()*0.6,height()*0.55),
-        area()
-    ]);
-
-    const toPanA = add([
-        rect(width()*0.09,height()*0.2,{
-            fill : false
-        }),
-        anchor("center"),
-        pos(width()*0.2,height()*0.65),
-        area()
-    ]);
-
-    const toLunA = add([
-        rect(width()*0.09,height()*0.4,{
-            fill : false
-        }),
-        anchor("center"),
-        pos(width()*0.3,height()*0.65),
-        area()
-    ]);
-
-    toRP.onHover(() => setCursor("crosshair"))
-    toRP.onHoverEnd(() => setCursor("default"))
-    toRP.onClick(() =>(go('RP')));
-
-    to248.onHover(() => setCursor("crosshair"))
-    to248.onHoverEnd(() => setCursor("default"))
-    to248.onClick(() => (go('248')));
-
-    toPanA.onHover(() => setCursor("crosshair"))
-    toPanA.onHoverEnd(() => setCursor("default"))
-    toPanA.onClick(() =>(go('panA')));
-
-    toLunA.onHover(() => setCursor("crosshair"))
-    toLunA.onHoverEnd(() => setCursor("default"))
-    toLunA.onClick(() =>(go('lunA')));
-});
-
-scene('panA', () =>{
-    add([
-        sprite('panA',{
-            width : width(),
-            height : height()
-        })
-    ]);
-    setCursor("default")
-
-    const toOF = add([
-        rect(width()*0.8,height()*0.3,{
-            fill : false
-        }),
-        anchor("center"),
-        pos(width()*0.5,height()*0.8),
-        area()
-    ]);
-
-    toOF.onHover(() => setCursor("crosshair"))
-    toOF.onHoverEnd(() => setCursor("default"))
-    toOF.onClick(() => (go('OF')));
-});
-
-scene('lunA', () =>{
-    add([
-        sprite('lunA',{
-            width : width(),
-            height : height()
-        })
-    ]);
-    setCursor("default")
-
-    const toOF = add([
-        rect(width()*0.8,height()*0.3,{
-            fill : false
-        }),
-        anchor("center"),
-        pos(width()*0.5,height()*0.8),
-        area()
-    ]);
-
-    toOF.onHover(() => setCursor("crosshair"))
-    toOF.onHoverEnd(() => setCursor("default"))
-    toOF.onClick(() => (go('OF')));
-});
-
-
-scene('248', () => {
-    add([
-        sprite('248',{
-            width : width(),
-            height : height()
-        })
-    ]);
-    setCursor("default")
-
-    const toOF = add([
-        rect(width()*0.8,height()*0.2,{
-            fill : false
-        }),
-        anchor("center"),
-        pos(width()*0.5,height()*0.9),
-        area()
-    ]);
-
-    const toPanC = add([
-        rect(width()*0.02,height()*0.05,{
-            fill : false
-        }),
-        anchor("center"),
-        pos(width()*0.628,height()*0.558),
-        area()
-    ]);
-
-    const toLunC = add([
-        rect(width()*0.016,height()*0.06,{
-            fill : false
-        }),
-        anchor("center"),
-        pos(width()*0.599,height()*0.547),
-        area()
-    ]);
-
-    onClick(() =>(console.log(width(),height(),mousePos())))
-    toOF.onHover(() => setCursor("crosshair"))
-    toOF.onHoverEnd(() => setCursor("default"))
-    toOF.onClick(() =>(go('OF')));
-
-    toPanC.onHover(() => setCursor("crosshair"))
-    toPanC.onHoverEnd(() => setCursor("default"))
-    toPanC.onClick(() =>(go('panC')));
-
-    toLunC.onHover(() => setCursor("crosshair"))
-    toLunC.onHoverEnd(() => setCursor("default"))
-    toLunC.onClick(() =>(go('lunC')));
-});
-
-scene('panC', () =>{
-    add([
-        sprite('panC',{
-            width : width(),
-            height : height()
-        })
-    ]);
-    setCursor("default")
-
-    const to248 = add([
-        rect(width()*0.8,height()*0.3,{
-            fill : false
-        }),
-        anchor("center"),
-        pos(width()*0.5,height()*0.8),
-        area()
-    ]);
-
-    to248.onHover(() => setCursor("crosshair"))
-    to248.onHoverEnd(() => setCursor("default"))
-    to248.onClick(() => (go('248')));
-});
-
-scene('lunC', () =>{
-    add([
-        sprite('lunC',{
-            width : width(),
-            height : height()
-        })
-    ]);
-    setCursor("default")
-
-    const to248 = add([
-        rect(width()*0.8,height()*0.3,{
-            fill : false
-        }),
-        anchor("center"),
-        pos(width()*0.5,height()*0.8),
-        area()
-    ]);
-
-    to248.onHover(() => setCursor("crosshair"))
-    to248.onHoverEnd(() => setCursor("default"))
-    to248.onClick(() => (go('248')));
-});
-
-go('248');
+// Start the game with go('menu')
+go('230');

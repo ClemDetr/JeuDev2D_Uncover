@@ -1,3 +1,4 @@
+import { invtry } from "../main"
 
 export{
     init
@@ -41,5 +42,17 @@ function init() {
             anchor('center'),
             area()
         ])
+
+        if (invtry.key_arche) {
+            arche.onHover(() => setCursor("crosshair"))
+            arche.onHoverEnd(() => setCursor("default"))
+            arche.onClick(() =>(
+                play("open"),
+                wait(1, () => {
+                    go('past0')
+                })
+                
+            ));
+        }
     })
 }

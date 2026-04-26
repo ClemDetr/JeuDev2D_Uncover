@@ -1,3 +1,4 @@
+import { invtry } from "../main"
 
 export{
     init
@@ -25,7 +26,7 @@ function init() {
         ]);
 
         keyArche.onClick(() => {
-            invtry.append("clé d'arche")
+            invtry.key_arche = 1
             keyArche.destroy()
         });
 
