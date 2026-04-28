@@ -54,6 +54,28 @@ function init() {
                 })
                 
             ));
+        }else{
+            var info
+            arche.onClick(() =>{
+                info = add([
+                    rect(width(),height()*0.1),
+                    
+                    pos(0,height()*0.9)
+                ]),
+                info.add([
+                    text("Il faudrait trouver une pierre pour finir la structure...", {
+                        width : width()*0.7,
+                        size : 20,
+                        z : 10
+                    }),
+                    color(255,255,255),
+                    pos(0,0)
+                ]), 
+                wait(3, () =>{
+                    info.destroy()
+                })
+            });
         }
+            
     })
 }
