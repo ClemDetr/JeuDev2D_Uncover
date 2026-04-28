@@ -1,4 +1,4 @@
-import { invtry } from "../main"
+import { invtry } from "../main.js"
 
 export{
     init

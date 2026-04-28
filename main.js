@@ -36,6 +36,9 @@ import * as scene239 from "./scenes/239.js";
 import * as lizard from "./scenes/lizard.js";
 import * as lizard2 from "./scenes/lizard2.js";
 import * as past0 from "./scenes/past0.js";
+import * as past1 from "./scenes/past1.js";
+import * as past3 from "./scenes/past3.js";
+import * as past4 from "./scenes/past4.js";
 import * as menu from "./scenes/menu.js";
 
 // Initialize KAPLAY
@@ -99,6 +102,9 @@ scene239.init();
 lizard.init();
 lizard2.init();
 past0.init();
+past1.init();
+past3.init();
+past4.init();
 menu.init();
 
 

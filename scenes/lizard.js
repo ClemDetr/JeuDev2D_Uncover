@@ -1,4 +1,4 @@
-import { invtry } from "../main"
+import { invtry } from "../main.js"
 
 export{
     init
@@ -24,7 +24,9 @@ function init() {
             area()
 
         ]);
-
+        keyArche.onHover(() => setCursor("crosshair"))
+        keyArche.onHoverEnd(() => setCursor("default"))
+        
         keyArche.onClick(() => {
             invtry.key_arche = 1
             keyArche.destroy()
