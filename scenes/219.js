@@ -38,6 +38,7 @@ function init() {
 
         const arche = add([
             sprite('arche'),
+            scale(0.7),
             pos(width()*0.5,height()*0.5),
             anchor('center'),
             area()
@@ -47,8 +48,8 @@ function init() {
             arche.onHover(() => setCursor("crosshair"))
             arche.onHoverEnd(() => setCursor("default"))
             arche.onClick(() =>(
-                play("open"),
-                wait(1, () => {
+                arche.play("open"),
+                wait(2, () => {
                     go('past0')
                 })
                 
