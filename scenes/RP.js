@@ -25,6 +25,10 @@ function init() {
         area()
     ]);
 
+    toEM.onHover(() => invtry.cursor_pointer = true)
+    toEM.onHoverEnd(() => invtry.cursor_pointer = false)
+    toEM.onClick(() => (go('EM')));
+
 
     const toOF = add([
         rect(width()*0.2,height()*0.2,{
@@ -34,13 +38,6 @@ function init() {
         pos(width()*0.9,height()*0.5),
         area()
     ]);
-
-
-    
-
-    toEM.onHover(() => invtry.cursor_pointer = true)
-    toEM.onHoverEnd(() => invtry.cursor_pointer = false)
-    toEM.onClick(() => (go('EM')));
 
     toOF.onHover(() => invtry.cursor_pointer = true)
     toOF.onHoverEnd(() => invtry.cursor_pointer = false)

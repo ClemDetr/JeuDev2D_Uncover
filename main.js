@@ -56,9 +56,12 @@ export const invtry = {
 }
 
 export function cursor() {
+    if (invtry.cursor_pointer) {
+        invtry.cursor_pointer = false
+    }
     setCursor("none")
-    loadSprite("souris","./assets/cursor.png")
-    loadSprite("hand","./assets/hand.png")
+    loadSprite("souris","/assets/cursor.png")
+    loadSprite("hand","/assets/hand.png")
     const cursor = add([
         sprite("souris"),
         pos(),
@@ -80,10 +83,12 @@ onUpdate(() =>{
     if (invtry.key_arche){
         text("Tu possèdes une clé d'arche.")
         pos(0,0)
+        z(5)
     }
     if (invtry.key_domus) {
         text("Tu possèdes une clé de maison.")
         pos(0,0)
+        z(5)
     }
 })
 
@@ -132,4 +137,4 @@ menu.init();
 
 
 // Start the game with go('menu')
-go('219');
+go('EM');
