@@ -37,11 +37,11 @@ function init() {
 
     
 
-    toEM.onHover(() => setCursor("crosshair"))
+    toEM.onHover(() => setCursor("pointer"))
     toEM.onHoverEnd(() => setCursor("default"))
     toEM.onClick(() => (go('EM')));
 
-    toOF.onHover(() => setCursor("crosshair"))
+    toOF.onHover(() => setCursor("pointer"))
     toOF.onHoverEnd(() => setCursor("default"))
     toOF.onClick(() => (go('OF')));
 });

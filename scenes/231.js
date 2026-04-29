@@ -23,7 +23,7 @@ function init() {
             area()
         ]);
 
-        to228.onHover(() => setCursor("crosshair"))
+        to228.onHover(() => setCursor("pointer"))
         to228.onHoverEnd(() => setCursor("default"))
         to228.onClick(() =>(go('228')));
 
@@ -37,7 +37,7 @@ function init() {
             area()
         ]);
 
-        to230.onHover(() => setCursor("crosshair"))
+        to230.onHover(() => setCursor("pointer"))
         to230.onHoverEnd(() => setCursor("default"))
         to230.onClick(() =>(go('230')));
 
@@ -50,7 +50,7 @@ function init() {
             area()
         ]);
         
-        to234.onHover(() => setCursor("crosshair"))
+        to234.onHover(() => setCursor("pointer"))
         to234.onHoverEnd(() => setCursor("default"))
         to234.onClick(() => (go('234')));
 
@@ -64,7 +64,7 @@ function init() {
             area()
         ]);
         
-        toPanE.onHover(() => setCursor("crosshair"))
+        toPanE.onHover(() => setCursor("pointer"))
         toPanE.onHoverEnd(() => setCursor("default"))
         toPanE.onClick(() =>(go('panE')));
 
@@ -77,7 +77,7 @@ function init() {
             area()
         ]);
 
-        toLunE.onHover(() => setCursor("crosshair"))
+        toLunE.onHover(() => setCursor("pointer"))
         toLunE.onHoverEnd(() => setCursor("default"))
         toLunE.onClick(() =>(go('lunE')));
     })

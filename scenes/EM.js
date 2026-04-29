@@ -33,11 +33,11 @@ function init() {
     ]);
 
     
-    toMus1.onHover(() => setCursor("crosshair"))
+    toMus1.onHover(() => setCursor("pointer"))
     toMus1.onHoverEnd(() => setCursor("default"))
     toMus1.onClick(() => (go('Mus1')));
 
-    toRP.onHover(() => setCursor("crosshair"))
+    toRP.onHover(() => setCursor("pointer"))
     toRP.onHoverEnd(() => setCursor("default"))
     toRP.onClick(() => (go('RP')));
 });

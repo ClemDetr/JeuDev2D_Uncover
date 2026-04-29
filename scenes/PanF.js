@@ -23,7 +23,7 @@ function init() {
         area()
     ]);
 
-    to217.onHover(() => setCursor("crosshair"))
+    to217.onHover(() => setCursor("pointer"))
     to217.onHoverEnd(() => setCursor("default"))
     to217.onClick(() => (go('217')));
     })

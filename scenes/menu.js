@@ -23,15 +23,7 @@ function init() {
             anchor("center"),
             pos(width()*0.7,height()*0.3)
         ])
-        menu.add([
-            text("les zones cliquables change ton curseur en croix !",{
-                size : height()*0.03,
-                width : width()*0.7
-            }),
-            anchor("center"),
-            pos(width()*0.7,height()*0.5)
-        ])
-        setCursor("crosshair")
+        setCursor("pointer")
 
         menu.onClick(() =>(go('EM')));
 

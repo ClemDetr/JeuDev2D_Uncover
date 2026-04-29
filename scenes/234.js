@@ -23,7 +23,7 @@ function init() {
             area()
         ]);
 
-        to227.onHover(() => setCursor("crosshair"))
+        to227.onHover(() => setCursor("pointer"))
         to227.onHoverEnd(() => setCursor("default"))
         to227.onClick(() =>(go('227')));
 
@@ -37,7 +37,7 @@ function init() {
             area()
         ]);
 
-        to231.onHover(() => setCursor("crosshair"))
+        to231.onHover(() => setCursor("pointer"))
         to231.onHoverEnd(() => setCursor("default"))
         to231.onClick(() =>(go('231')));
 
@@ -50,7 +50,7 @@ function init() {
             area()
         ]);
         
-        to235.onHover(() => setCursor("crosshair"))
+        to235.onHover(() => setCursor("pointer"))
         to235.onHoverEnd(() => setCursor("default"))
         to235.onClick(() => (go('235')));
     })

@@ -37,11 +37,11 @@ function init() {
     
     
 
-    to242.onHover(() => setCursor("crosshair"))
+    to242.onHover(() => setCursor("pointer"))
     to242.onHoverEnd(() => setCursor("default"))
     to242.onClick(() =>(go('242')));
 
-    to225.onHover(() => setCursor("crosshair"))
+    to225.onHover(() => setCursor("pointer"))
     to225.onHoverEnd(() => setCursor("default"))
     to225.onClick(() =>(go('225')));
     

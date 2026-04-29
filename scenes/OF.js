@@ -50,19 +50,19 @@ function init() {
         area()
     ]);
 
-    toRP.onHover(() => setCursor("crosshair"))
+    toRP.onHover(() => setCursor("pointer"))
     toRP.onHoverEnd(() => setCursor("default"))
     toRP.onClick(() =>(go('RP')));
 
-    to248.onHover(() => setCursor("crosshair"))
+    to248.onHover(() => setCursor("pointer"))
     to248.onHoverEnd(() => setCursor("default"))
     to248.onClick(() => (go('248')));
 
-    toPanA.onHover(() => setCursor("crosshair"))
+    toPanA.onHover(() => setCursor("pointer"))
     toPanA.onHoverEnd(() => setCursor("default"))
     toPanA.onClick(() =>(go('panA')));
 
-    toLunA.onHover(() => setCursor("crosshair"))
+    toLunA.onHover(() => setCursor("pointer"))
     toLunA.onHoverEnd(() => setCursor("default"))
     toLunA.onClick(() =>(go('lunA')));
 });

@@ -53,6 +53,12 @@ export const invtry = {
     key_arche : false,
     key_domus : false,
 }
+loadSprite("souris","./assets/cursor.png")
+const cursor = add([
+    sprite("souris"),
+    fakemouse(),
+    fixed()
+])
 onUpdate(() =>{
     if (invtry.key_arche){
         text("Tu possèdes une clé d'arche.")
