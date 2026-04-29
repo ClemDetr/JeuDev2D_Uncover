@@ -24,7 +24,7 @@ function init() {
             area()
 
         ]);
-        keyArche.onHover(() => setCursor("pointer"))
+        keyArche.onHover(() => cursor.sprite ="hand")
         keyArche.onHoverEnd(() => setCursor("default"))
         
         keyArche.onClick(() => {
@@ -41,7 +41,7 @@ function init() {
             area()
         ]);
 
-        to230.onHover(() => setCursor("pointer"))
+        to230.onHover(() => cursor.sprite ="hand")
         to230.onHoverEnd(() => setCursor("default"))
         to230.onClick(() =>(go('230')));
     })

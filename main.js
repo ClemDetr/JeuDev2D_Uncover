@@ -1,4 +1,4 @@
-import kaplay from "https://unpkg.com/kaplay@3001.0.19/dist/kaplay.mjs";
+import kaplay from "https://unpkg.com/kaplay@4000.0.0-alpha.15/dist/kaplay.mjs";
 
 import * as Mus1 from "./scenes/Mus1.js";
 import * as EM from "./scenes/EM.js";
@@ -53,11 +53,14 @@ export const invtry = {
     key_arche : false,
     key_domus : false,
 }
+
 loadSprite("souris","./assets/cursor.png")
 const cursor = add([
     sprite("souris"),
-    fakemouse(),
-    fixed()
+    pos(),
+    fakeMouse({
+        followMouse : true
+    })
 ])
 onUpdate(() =>{
     if (invtry.key_arche){

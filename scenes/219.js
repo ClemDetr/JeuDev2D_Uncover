@@ -24,6 +24,16 @@ function init() {
         ]);
         setCursor("default")
 
+        loadSprite("souris","./assets/cursor.png")
+        loadSprite("hand","./assets/hand.png")
+        const cursor = add([
+            sprite("souris"),
+            pos(),
+            fakeMouse({
+                followMouse : true
+            })
+        ])
+
         const to217 = add([
             rect(width()*0.8,height()*0.2,{
             fill : false
@@ -33,8 +43,8 @@ function init() {
             area()
         ]);
 
-        to217.onHover(() => document.body.className = "crosshair")
-        to217.onHoverEnd(() => document.body.className = "default")
+        to217.onHover(() => cursor.sprite ="hand")
+        to217.onHoverEnd(() => cursor.sprite ="souris")
         to217.onClick(() =>(go('217')));
 
         const arche = add([
@@ -45,8 +55,8 @@ function init() {
             area()
         ])
 
-        arche.onHover(() => setCursor("hand"))
-        arche.onHoverEnd(() => setCursor("default"))
+        arche.onHover(() => cursor.sprite ="hand")
+        arche.onHoverEnd(() => cursor.sprite ="souris")
         if (invtry.key_arche) {
             
             arche.onClick(() =>(
