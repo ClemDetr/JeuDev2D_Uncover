@@ -52,16 +52,30 @@ kaplay({
 export const invtry = {
     key_arche : false,
     key_domus : false,
+    cursor_pointer : false
 }
 
-loadSprite("souris","./assets/cursor.png")
-const cursor = add([
-    sprite("souris"),
-    pos(),
-    fakeMouse({
-        followMouse : true
+export function cursor() {
+    setCursor("none")
+    loadSprite("souris","./assets/cursor.png")
+    loadSprite("hand","./assets/hand.png")
+    const cursor = add([
+        sprite("souris"),
+        pos(),
+        z(10),
+        fakeMouse({
+            followMouse : true
+        })
+    ])
+    onUpdate(() =>{
+        if (invtry.cursor_pointer) {
+            cursor.sprite = "hand"
+        } else {
+            cursor.sprite = "souris"
+        }
     })
-])
+}
+
 onUpdate(() =>{
     if (invtry.key_arche){
         text("Tu possèdes une clé d'arche.")

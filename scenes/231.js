@@ -1,3 +1,4 @@
+import { invtry, cursor } from "../main.js"
 
 export{
     init
@@ -12,7 +13,7 @@ function init() {
                 height : height()
             })
         ]);
-        setCursor("default")
+        cursor()
 
         const to228 = add([
             rect(width()*0.7,height()*0.2,{
@@ -23,8 +24,8 @@ function init() {
             area()
         ]);
 
-        to228.onHover(() => setCursor("pointer"))
-        to228.onHoverEnd(() => setCursor("default"))
+        to228.onHover(() => invtry.cursor_pointer = true)
+        to228.onHoverEnd(() => invtry.cursor_pointer = false)
         to228.onClick(() =>(go('228')));
 
 
@@ -37,8 +38,8 @@ function init() {
             area()
         ]);
 
-        to230.onHover(() => setCursor("pointer"))
-        to230.onHoverEnd(() => setCursor("default"))
+        to230.onHover(() => invtry.cursor_pointer = true)
+        to230.onHoverEnd(() => invtry.cursor_pointer = false)
         to230.onClick(() =>(go('230')));
 
         const to234 = add([
@@ -50,8 +51,8 @@ function init() {
             area()
         ]);
         
-        to234.onHover(() => setCursor("pointer"))
-        to234.onHoverEnd(() => setCursor("default"))
+        to234.onHover(() => invtry.cursor_pointer = true)
+        to234.onHoverEnd(() => invtry.cursor_pointer = false)
         to234.onClick(() => (go('234')));
 
 
@@ -64,8 +65,8 @@ function init() {
             area()
         ]);
         
-        toPanE.onHover(() => setCursor("pointer"))
-        toPanE.onHoverEnd(() => setCursor("default"))
+        toPanE.onHover(() => invtry.cursor_pointer = true)
+        toPanE.onHoverEnd(() => invtry.cursor_pointer = false)
         toPanE.onClick(() =>(go('panE')));
 
         const toLunE = add([
@@ -77,8 +78,8 @@ function init() {
             area()
         ]);
 
-        toLunE.onHover(() => setCursor("pointer"))
-        toLunE.onHoverEnd(() => setCursor("default"))
+        toLunE.onHover(() => invtry.cursor_pointer = true)
+        toLunE.onHoverEnd(() => invtry.cursor_pointer = false)
         toLunE.onClick(() =>(go('lunE')));
     })
 }

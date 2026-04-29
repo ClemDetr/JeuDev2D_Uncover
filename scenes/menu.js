@@ -1,3 +1,4 @@
+import { invtry, cursor } from "../main.js"
 
 export{
     init,
@@ -23,7 +24,7 @@ function init() {
             anchor("center"),
             pos(width()*0.7,height()*0.3)
         ])
-        setCursor("pointer")
+        cursor()
 
         menu.onClick(() =>(go('EM')));
 

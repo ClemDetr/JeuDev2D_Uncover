@@ -1,3 +1,4 @@
+import { invtry, cursor } from "../main.js"
 
 export{
     init
@@ -12,7 +13,7 @@ function init() {
             height : height()
         })
     ]);
-    setCursor("default")
+    cursor()
 
     const toOF = add([
         rect(width()*0.8,height()*0.2,{
@@ -32,8 +33,8 @@ function init() {
         area()
     ]);
 
-    to242.onHover(() => setCursor("pointer"))
-    to242.onHoverEnd(() => setCursor("default"))
+    to242.onHover(() => invtry.cursor_pointer = true)
+    to242.onHoverEnd(() => invtry.cursor_pointer = false)
     to242.onClick(() =>(go('242')));
 
     const to239 = add([
@@ -45,8 +46,8 @@ function init() {
         area()
     ]);
 
-    to239.onHover(() => setCursor("pointer"))
-    to239.onHoverEnd(() => setCursor("default"))
+    to239.onHover(() => invtry.cursor_pointer = true)
+    to239.onHoverEnd(() => invtry.cursor_pointer = false)
     to239.onClick(() =>(go('239')));
 
     const toPanC = add([
@@ -68,18 +69,18 @@ function init() {
     ]);
 
     
-    toOF.onHover(() => setCursor("pointer"))
-    toOF.onHoverEnd(() => setCursor("default"))
+    toOF.onHover(() => invtry.cursor_pointer = true)
+    toOF.onHoverEnd(() => invtry.cursor_pointer = false)
     toOF.onClick(() =>(go('OF')));
 
     
 
-    toPanC.onHover(() => setCursor("pointer"))
-    toPanC.onHoverEnd(() => setCursor("default"))
+    toPanC.onHover(() => invtry.cursor_pointer = true)
+    toPanC.onHoverEnd(() => invtry.cursor_pointer = false)
     toPanC.onClick(() =>(go('panC')));
 
-    toLunC.onHover(() => setCursor("pointer"))
-    toLunC.onHoverEnd(() => setCursor("default"))
+    toLunC.onHover(() => invtry.cursor_pointer = true)
+    toLunC.onHoverEnd(() => invtry.cursor_pointer = false)
     toLunC.onClick(() =>(go('lunC')));
 });
 }

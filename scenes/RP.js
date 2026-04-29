@@ -1,3 +1,4 @@
+import { invtry, cursor } from "../main.js"
 
 export{
     init,
@@ -12,7 +13,7 @@ function init() {
             height : height()
         })
     ]);
-    setCursor("default")
+    cursor()
 
 
     const toEM = add([
@@ -37,12 +38,12 @@ function init() {
 
     
 
-    toEM.onHover(() => setCursor("pointer"))
-    toEM.onHoverEnd(() => setCursor("default"))
+    toEM.onHover(() => invtry.cursor_pointer = true)
+    toEM.onHoverEnd(() => invtry.cursor_pointer = false)
     toEM.onClick(() => (go('EM')));
 
-    toOF.onHover(() => setCursor("pointer"))
-    toOF.onHoverEnd(() => setCursor("default"))
+    toOF.onHover(() => invtry.cursor_pointer = true)
+    toOF.onHoverEnd(() => invtry.cursor_pointer = false)
     toOF.onClick(() => (go('OF')));
 });
 }

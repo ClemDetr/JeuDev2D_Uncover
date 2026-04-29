@@ -1,3 +1,4 @@
+import { invtry, cursor } from "../main.js"
 
 export{
     init,
@@ -15,15 +16,15 @@ function init() {
             height : height()
         })
     ]);
-    setCursor("default")
+    cursor()
 
     const letter = add([
         sprite("letter"),
         area()
     ])
 
-    letter.onHover(() => setCursor("pointer"))
-    letter.onHoverEnd(() => setCursor("default"))
+    letter.onHover(() => invtry.cursor_pointer = true)
+    letter.onHoverEnd(() => invtry.cursor_pointer = false)
     letter.onClick(() =>{
         sprite("letter2"),
         letter.add([
@@ -50,8 +51,8 @@ function init() {
     ]);
 
     
-    toEM.onHover(() => setCursor("pointer"))
-    toEM.onHoverEnd(() => setCursor("default"))
+    toEM.onHover(() => invtry.cursor_pointer = true)
+    toEM.onHoverEnd(() => invtry.cursor_pointer = false)
     toEM.onClick(() =>(go('EM')));
 
 });

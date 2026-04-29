@@ -1,4 +1,4 @@
-import { invtry } from "../main.js"
+import { invtry, cursor } from "../main.js"
 
 export{
     init
@@ -22,17 +22,9 @@ function init() {
             height : height()
         })
         ]);
-        setCursor("default")
+        
 
-        loadSprite("souris","./assets/cursor.png")
-        loadSprite("hand","./assets/hand.png")
-        const cursor = add([
-            sprite("souris"),
-            pos(),
-            fakeMouse({
-                followMouse : true
-            })
-        ])
+        cursor()
 
         const to217 = add([
             rect(width()*0.8,height()*0.2,{
@@ -43,20 +35,20 @@ function init() {
             area()
         ]);
 
-        to217.onHover(() => cursor.sprite ="hand")
-        to217.onHoverEnd(() => cursor.sprite ="souris")
+        to217.onHover(() => invtry.cursor_pointer = true)
+        to217.onHoverEnd(() => invtry.cursor_pointer = false)
         to217.onClick(() =>(go('217')));
 
         const arche = add([
             sprite('arche'),
             scale(0.7),
-            pos(width()*0.5,height()*0.5),
+            pos(width()*0.5,height()*0.45),
             anchor('center'),
             area()
         ])
 
-        arche.onHover(() => cursor.sprite ="hand")
-        arche.onHoverEnd(() => cursor.sprite ="souris")
+        arche.onHover(() => invtry.cursor_pointer = true)
+        arche.onHoverEnd(() => invtry.cursor_pointer = false)
         if (invtry.key_arche) {
             
             arche.onClick(() =>(

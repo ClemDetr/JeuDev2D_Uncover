@@ -1,3 +1,4 @@
+import { invtry, cursor } from "../main.js"
 
 export{
     init
@@ -12,7 +13,7 @@ function init() {
             height : height()
         })
     ]);
-    setCursor("default")
+    cursor()
 
     const toOF = add([
         rect(width()*0.8,height()*0.3,{
@@ -23,8 +24,8 @@ function init() {
         area()
     ]);
 
-    toOF.onHover(() => setCursor("pointer"))
-    toOF.onHoverEnd(() => setCursor("default"))
+    toOF.onHover(() => invtry.cursor_pointer = true)
+    toOF.onHoverEnd(() => invtry.cursor_pointer = false)
     toOF.onClick(() => (go('OF')));
 });
 }

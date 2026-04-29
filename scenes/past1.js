@@ -1,3 +1,5 @@
+import { invtry, cursor } from "../main.js"
+
 export{
     init
 }
@@ -14,7 +16,7 @@ function init() {
             height : height()
         })
         ]);
-        setCursor("default")
+        cursor()
 
     })
 }

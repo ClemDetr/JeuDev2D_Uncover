@@ -1,3 +1,4 @@
+import { invtry, cursor } from "../main.js"
 
 export{
     init
@@ -12,7 +13,7 @@ function init() {
                 height : height()
             })
         ]);
-        setCursor("default")
+        cursor()
 
         const to248 = add([
             rect(width()*0.7,height()*0.2,{
@@ -23,8 +24,8 @@ function init() {
             area()
         ]);
 
-        to248.onHover(() => setCursor("pointer"))
-        to248.onHoverEnd(() => setCursor("default"))
+        to248.onHover(() => invtry.cursor_pointer = true)
+        to248.onHoverEnd(() => invtry.cursor_pointer = false)
         to248.onClick(() =>(go('248')));
 
         const to235 = add([
@@ -36,8 +37,8 @@ function init() {
             area()
         ]);
 
-        to235.onHover(() => setCursor("pointer"))
-        to235.onHoverEnd(() => setCursor("default"))
+        to235.onHover(() => invtry.cursor_pointer = true)
+        to235.onHoverEnd(() => invtry.cursor_pointer = false)
         to235.onClick(() =>(go('235')));
 
         const toPanD = add([
@@ -49,8 +50,8 @@ function init() {
             area()
         ]);
         
-        toPanD.onHover(() => setCursor("pointer"))
-        toPanD.onHoverEnd(() => setCursor("default"))
+        toPanD.onHover(() => invtry.cursor_pointer = true)
+        toPanD.onHoverEnd(() => invtry.cursor_pointer = false)
         toPanD.onClick(() =>(go('panD')));
 
         const toLunD = add([
@@ -63,8 +64,8 @@ function init() {
         ]);
 
         
-        toLunD.onHover(() => setCursor("pointer"))
-        toLunD.onHoverEnd(() => setCursor("default"))
+        toLunD.onHover(() => invtry.cursor_pointer = true)
+        toLunD.onHoverEnd(() => invtry.cursor_pointer = false)
         toLunD.onClick(() =>(go('lunD')));
 
     })

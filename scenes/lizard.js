@@ -1,4 +1,4 @@
-import { invtry } from "../main.js"
+import { invtry, cursor } from "../main.js"
 
 export{
     init
@@ -15,7 +15,7 @@ function init() {
             height : height()
         })
         ]);
-        setCursor("default")
+        cursor()
 
         const keyArche = add([
             sprite('keyArche'),
@@ -24,8 +24,8 @@ function init() {
             area()
 
         ]);
-        keyArche.onHover(() => cursor.sprite ="hand")
-        keyArche.onHoverEnd(() => setCursor("default"))
+        keyArche.onHover(() => invtry.cursor_pointer = true)
+        keyArche.onHoverEnd(() => invtry.cursor_pointer = false)
         
         keyArche.onClick(() => {
             invtry.key_arche = 1
@@ -41,8 +41,8 @@ function init() {
             area()
         ]);
 
-        to230.onHover(() => cursor.sprite ="hand")
-        to230.onHoverEnd(() => setCursor("default"))
+        to230.onHover(() => invtry.cursor_pointer = true)
+        to230.onHoverEnd(() => invtry.cursor_pointer = false)
         to230.onClick(() =>(go('230')));
     })
 }

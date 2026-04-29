@@ -1,3 +1,4 @@
+import { invtry, cursor } from "../main.js"
 
 export{
     init,
@@ -12,7 +13,7 @@ function init() {
             height : height()
         }),
     ]);
-    setCursor("default")
+    cursor()
 
     const toRP = add([
         rect(width()/10,height()/2,{
@@ -33,12 +34,12 @@ function init() {
     ]);
 
     
-    toMus1.onHover(() => setCursor("pointer"))
-    toMus1.onHoverEnd(() => setCursor("default"))
+    toMus1.onHover(() => invtry.cursor_pointer = true)
+    toMus1.onHoverEnd(() => invtry.cursor_pointer = false)
     toMus1.onClick(() => (go('Mus1')));
 
-    toRP.onHover(() => setCursor("pointer"))
-    toRP.onHoverEnd(() => setCursor("default"))
+    toRP.onHover(() => invtry.cursor_pointer = true)
+    toRP.onHoverEnd(() => invtry.cursor_pointer = false)
     toRP.onClick(() => (go('RP')));
 });
 }

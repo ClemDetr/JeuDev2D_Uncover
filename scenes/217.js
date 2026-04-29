@@ -1,3 +1,4 @@
+import { invtry, cursor } from "../main.js"
 
 export{
     init
@@ -12,7 +13,7 @@ function init() {
                 height : height()
             })
         ]);
-        setCursor("default")
+        cursor()
 
 
         const to220 = add([
@@ -24,8 +25,8 @@ function init() {
             area()
         ]);
 
-        to220.onHover(() => setCursor("pointer"))
-        to220.onHoverEnd(() => setCursor("default"))
+        to220.onHover(() => invtry.cursor_pointer = true)
+        to220.onHoverEnd(() => invtry.cursor_pointer = false)
         to220.onClick(() => (go('220')));
 
         const to219 = add([
@@ -37,8 +38,8 @@ function init() {
             area()
         ]);
         
-        to219.onHover(() => setCursor("pointer"))
-        to219.onHoverEnd(() => setCursor("default"))
+        to219.onHover(() => invtry.cursor_pointer = true)
+        to219.onHoverEnd(() => invtry.cursor_pointer = false)
         to219.onClick(() => (go('219')));
 
 
@@ -51,8 +52,8 @@ function init() {
             area()
         ]);
 
-        toPanF.onHover(() => setCursor("pointer"))
-        toPanF.onHoverEnd(() => setCursor("default"))
+        toPanF.onHover(() => invtry.cursor_pointer = true)
+        toPanF.onHoverEnd(() => invtry.cursor_pointer = false)
         toPanF.onClick(() =>(go('PanF')));
     })
 }
