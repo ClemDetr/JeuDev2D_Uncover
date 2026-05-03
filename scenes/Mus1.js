@@ -6,8 +6,8 @@ export{
 
 function init() {
     loadSprite('Mus1',"./assets/254-Mus1.JPG")
-    loadSprite('letter',"./assets/star.png")
-    loadSprite('letter2',"./assets/star.png")
+    loadSprite('letter',"./assets/letter.png")
+    loadSprite('letter2',"./assets/letter2.png")
     loadSprite('collec',"./assets/profilpicturecollect.png")
     scene('Mus1', () => {
     add([
@@ -26,18 +26,11 @@ function init() {
     letter.onHover(() => invtry.cursor_pointer = true)
     letter.onHoverEnd(() => invtry.cursor_pointer = false)
     letter.onClick(() =>{
-        sprite("letter2"),
-        letter.add([
-            text("Vous êtes charger de retrouver la place d'un vieux collectionneur, il a été vu pour la dernière fois dans les ruines romaines. Voici sa photo :",{
-                width : width()*0.8,
-                size : 15
-            }),
-            pos(5,10)
-        ])
+        letter.sprite = "letter2",
         letter.add([
             sprite("collec"),
-            scale(0.3),
-            pos(50,0)
+            scale(0.2),
+            pos(350,0)
         ])
     });
 

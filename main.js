@@ -79,18 +79,6 @@ export function cursor() {
     })
 }
 
-onUpdate(() =>{
-    if (invtry.key_arche){
-        text("Tu possèdes une clé d'arche.")
-        pos(0,0)
-        z(5)
-    }
-    if (invtry.key_domus) {
-        text("Tu possèdes une clé de maison.")
-        pos(0,0)
-        z(5)
-    }
-})
 
 
 // Initialize scenes
@@ -137,4 +125,4 @@ menu.init();
 
 
 // Start the game with go('menu')
-go('EM');
+go('Mus1');
