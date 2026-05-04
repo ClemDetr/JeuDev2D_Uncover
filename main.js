@@ -56,25 +56,26 @@ export const invtry = {
 }
 
 export function cursor() {
-    if (invtry.cursor_pointer) {
-        invtry.cursor_pointer = false
-    }
+    invtry.cursor_pointer = false
+
     setCursor("none")
+
     loadSprite("souris","/assets/cursor.png")
     loadSprite("hand","/assets/hand.png")
+
     const cursor = add([
         sprite("souris"),
         pos(),
         z(10),
-        fakeMouse({
-            followMouse : true
-        })
+        fixed()
     ])
     onUpdate(() =>{
+        cursor.pos = mousePos()
+    
         if (invtry.cursor_pointer) {
-            cursor.sprite = "hand"
+            cursor.use(sprite("hand"))
         } else {
-            cursor.sprite = "souris"
+            cursor.use(sprite("souris"))
         }
     })
 }
