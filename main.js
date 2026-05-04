@@ -1,4 +1,4 @@
-import kaplay from "https://unpkg.com/kaplay@4000.0.0-alpha.15/dist/kaplay.mjs";
+import kaplay from "https://unpkg.com/kaplay@3001.0.19/dist/kaplay.mjs";
 
 import * as Mus1 from "./scenes/Mus1.js";
 import * as EM from "./scenes/EM.js";
@@ -39,6 +39,10 @@ import * as past0 from "./scenes/past0.js";
 import * as past1 from "./scenes/past1.js";
 import * as past3 from "./scenes/past3.js";
 import * as past4 from "./scenes/past4.js";
+import * as CD0 from "./scenes/CD0.js";
+import * as CD1 from "./scenes/CD1.js";
+import * as CD2 from "./scenes/CD2.js";
+import * as Domus from "./scenes/Domus.js";
 import * as menu from "./scenes/menu.js";
 
 // Initialize KAPLAY
@@ -122,8 +126,12 @@ past0.init();
 past1.init();
 past3.init();
 past4.init();
+CD0.init();
+CD1.init();
+CD2.init();
+Domus.init();
 menu.init();
 
 
 // Start the game with go('menu')
-go('Mus1');
+go('cd1');

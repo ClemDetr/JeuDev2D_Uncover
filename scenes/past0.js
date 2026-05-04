@@ -19,11 +19,11 @@ function init() {
         cursor()
 
         const toPast1 = add([
-            rect(width()*0.2,height()*0.2,{
+            rect(width()*0.2,height()*0.3,{
                 fill : false
             }),
             anchor("center"),
-            pos(width()*0.5,height()*0.5),
+            pos(width()*0.4,height()*0.4),
             area()
         ]);
 

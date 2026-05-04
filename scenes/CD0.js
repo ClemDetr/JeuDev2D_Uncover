@@ -5,18 +5,29 @@ export{
 }
 
 function init() {
-    loadSprite('past1',"./assets/Past1.png")
+    loadSprite('cd0',"./assets/CD0.png")
     
     scene('cd0', () => {
         add([
             
         sprite('cd0',{
-            width :
-             width(),
+            width : width(),
             height : height()
         })
         ]);
         cursor()
 
+        const toCD1 = add([
+            rect(width()*0.1,height()*0.5,{
+                fill : true
+            }),
+            anchor("center"),
+            pos(width()*0.15,height()*0.44),
+            area()
+        ]);
+
+        toCD1.onHover(() => invtry.cursor_pointer = true)
+        toCD1.onHoverEnd(() => invtry.cursor_pointer = false)
+        toCD1.onClick(() => (go('cd1')));
     })
 }
