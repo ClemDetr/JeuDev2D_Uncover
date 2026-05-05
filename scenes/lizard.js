@@ -17,32 +17,34 @@ function init() {
         ]);
         cursor()
 
-        const keyArche = add([
-            sprite('keyArche'),
-            anchor("center"),
-            pos(width()*0.4, height()*0.2),
-            area()
+        if (!invtry.key_arche) {
+            const keyArche = add([
+                sprite('keyArche'),
+                anchor("center"),
+                pos(width()*0.4, height()*0.2),
+                area()
 
-        ]);
-        keyArche.onHover(() => invtry.cursor_pointer = true)
-        keyArche.onHoverEnd(() => invtry.cursor_pointer = false)
-        
-        keyArche.onClick(() => {
-            invtry.key_arche = 1
-            keyArche.destroy()
-        });
+            ]);
+            keyArche.onHover(() => invtry.cursor_pointer = true)
+            keyArche.onHoverEnd(() => invtry.cursor_pointer = false)
+            
+            keyArche.onClick(() => {
+                invtry.key_arche = 1
+                keyArche.destroy()
+            });
 
-        const to230 = add([
-            rect(width()*0.7,height()*0.2,{
-            fill : false
-            }),
-            anchor("center"),
-            pos(width()*0.5,height()),
-            area()
-        ]);
+            const to230 = add([
+                rect(width()*0.7,height()*0.2,{
+                fill : false
+                }),
+                anchor("center"),
+                pos(width()*0.5,height()),
+                area()
+            ]);
 
-        to230.onHover(() => invtry.cursor_pointer = true)
-        to230.onHoverEnd(() => invtry.cursor_pointer = false)
-        to230.onClick(() =>(go('230')));
+            to230.onHover(() => invtry.cursor_pointer = true)
+            to230.onHoverEnd(() => invtry.cursor_pointer = false)
+            to230.onClick(() =>(go('230')));
+        }
     })
 }

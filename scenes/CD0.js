@@ -31,20 +31,22 @@ function init() {
         toCD1.onHoverEnd(() => invtry.cursor_pointer = false)
         toCD1.onClick(() => (go('cd1')));
 
-        const keyDomus = add([
-            sprite('keyDomus'),
-            scale(0.1),
-            anchor("center"),
-            pos(width()*0.7, height()*0.6),
-            area()
+        if (!invtry.key_domus) {
+            const keyDomus = add([
+                sprite('keyDomus'),
+                scale(0.1),
+                anchor("center"),
+                pos(width()*0.7, height()*0.5),
+                area()
 
-        ]);
-        keyDomus.onHover(() => invtry.cursor_pointer = true)
-        keyDomus.onHoverEnd(() => invtry.cursor_pointer = false)
-        
-        keyDomus.onClick(() => {
-            invtry.key_domus = 1
-            keyDomus.destroy()
-        });
+            ]);
+            keyDomus.onHover(() => invtry.cursor_pointer = true)
+            keyDomus.onHoverEnd(() => invtry.cursor_pointer = false)
+            
+            keyDomus.onClick(() => {
+                invtry.key_domus = 1
+                keyDomus.destroy()
+            });
+        }
     })
 }
