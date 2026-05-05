@@ -54,6 +54,6 @@ function init() {
 
         toPanF.onHover(() => invtry.cursor_pointer = true)
         toPanF.onHoverEnd(() => invtry.cursor_pointer = false)
-        toPanF.onClick(() =>(go('PanF')));
+        toPanF.onClick(() =>(go('panF')));
     })
 }

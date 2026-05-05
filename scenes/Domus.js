@@ -47,6 +47,8 @@ function init() {
             ]),
             wait(10, () => {
                 collectionneur.destroy()
+                invtry.key_domus = false
+                invtry.key_arche = false
                 go('menu')
             })
         })

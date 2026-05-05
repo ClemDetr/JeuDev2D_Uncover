@@ -134,4 +134,4 @@ menu.init();
 
 
 // Start the game with go('menu')
-go('cd1');
+go('menu');

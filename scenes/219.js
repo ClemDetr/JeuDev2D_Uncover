@@ -67,7 +67,7 @@ function init() {
                     pos(0,height()*0.9)
                 ]),
                 info.add([
-                    text("Il faudrait trouver une pierre pour finir la structure...", {
+                    text("Il faudrait trouver une pierre pour finir la structure..., peut-être sur un des murs ?", {
                         width : width()*0.7,
                         size : 20,
                         z : 10
