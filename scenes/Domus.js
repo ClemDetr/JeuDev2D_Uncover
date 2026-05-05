@@ -5,7 +5,7 @@ export{
 }
 
 function init() {
-    loadSprite('domus',"./assets/Past1.png")
+    loadSprite('domus',"./assets/Domus.png")
     
     scene('domus', () => {
         add([

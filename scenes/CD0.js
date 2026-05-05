@@ -6,6 +6,7 @@ export{
 
 function init() {
     loadSprite('cd0',"./assets/CD0.png")
+    loadSprite('keyDomus',"./assets/KeyDomus.png")
     
     scene('cd0', () => {
         add([
@@ -19,7 +20,7 @@ function init() {
 
         const toCD1 = add([
             rect(width()*0.1,height()*0.5,{
-                fill : true
+                fill : false
             }),
             anchor("center"),
             pos(width()*0.15,height()*0.44),
@@ -29,5 +30,21 @@ function init() {
         toCD1.onHover(() => invtry.cursor_pointer = true)
         toCD1.onHoverEnd(() => invtry.cursor_pointer = false)
         toCD1.onClick(() => (go('cd1')));
+
+        const keyDomus = add([
+            sprite('keyDomus'),
+            scale(0.1),
+            anchor("center"),
+            pos(width()*0.7, height()*0.6),
+            area()
+
+        ]);
+        keyDomus.onHover(() => invtry.cursor_pointer = true)
+        keyDomus.onHoverEnd(() => invtry.cursor_pointer = false)
+        
+        keyDomus.onClick(() => {
+            invtry.key_domus = 1
+            keyDomus.destroy()
+        });
     })
 }
