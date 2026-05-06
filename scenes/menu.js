@@ -17,11 +17,11 @@ function init() {
             area()
         ]);
         menu.add([
-            rect(width()*0.55, height()*0.2, {
+            rect(width()*0.55, height()*0.2+20, {
                 fill : true
             }),
             anchor("center"),
-            pos(width()*0.5,height()*0.3)
+            pos(width()*0.5,height()*0.3-10)
         ])
         menu.add([
             text("Clique n'importe où pour commencer !",{

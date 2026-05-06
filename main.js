@@ -56,7 +56,7 @@ kaplay({
 export const invtry = {
     key_arche : false,
     key_domus : false,
-    cursor_pointer : false
+    cursor_pointer : false,
 }
 
 export function cursor() {
@@ -70,9 +70,12 @@ export function cursor() {
     const cursor = add([
         sprite("souris"),
         pos(),
-        z(10),
+        z(999),
         fixed()
     ])
+
+    
+    
     onUpdate(() =>{
         cursor.pos = mousePos()
     
@@ -81,9 +84,99 @@ export function cursor() {
         } else {
             cursor.use(sprite("souris"))
         }
+
+        if (invtry.key_arche || invtry.key_domus) {
+        const inventory = add([
+            rect(width()*0.3, height()*0.1, {
+                fill : true,
+                color : rgb(255,255,255)
+            }),
+            pos(0,0),
+        ])
+        if (invtry.key_arche) {
+            inventory.add([
+                text("Inventaire : clé d'arche",{
+                    size : 20,
+                    color : rgb(0,0,0)
+                }),
+                pos(5,5),
+                z(800)
+            ])
+        }else if (invtry.key_domus) {
+            inventory.add([
+                text("Inventaire : clé de domus",{
+                    size : 20,
+                    color : rgb(0,0,0)
+                }),
+                pos(5,5),
+                z(800)
+            ])
+        }
+    }
     })
 }
 
+export function startDialogue(data) {
+    let current = "start"
+    let elements = []
+    
+
+    function clearUI() {
+        elements.forEach(e => destroy(e))
+        elements = []
+    }
+
+    function showNode(id) {
+        clearUI()
+
+        if (!data[id]) return
+
+        const node = data[id]
+
+        const box = add([
+            rect(width()*0.8, 160),
+            pos(width()*0.1, height() - 300),
+            color(0, 0, 0),
+            fixed(),
+            z(100)
+        ])
+
+        const txt = add([
+            text(node.text, { width: width()*0.8 - 40, size: 20 }),
+            pos(width()*0.1 + 20, height() - 280),
+            fixed(),
+            z(101)
+        ])
+
+        elements.push(box, txt)
+
+        node.choices.forEach((choice, i) => {
+            const btn = add([
+                text(choice.text, { size: 16 }),
+                pos(width()*0.1 + 40, height() - 240 + i * 25),
+                area(),
+                fixed(),
+                z(101)
+            ])
+
+            btn.onHover(() => btn.color = rgb(200, 200, 0))
+            btn.onHoverEnd(() => btn.color = rgb(255, 255, 255))
+
+            btn.onClick(() => {
+                if (choice.next === "end") {
+                    clearUI()
+                } else {
+                    wait(0.2, () => {
+                    showNode(choice.next)})
+                }
+            })
+
+            elements.push(btn)
+        })
+    }
+
+    showNode(current)
+}
 
 
 // Initialize scenes
@@ -134,4 +227,4 @@ menu.init();
 
 
 // Start the game with go('menu')
-go('menu');
+go('past1');
