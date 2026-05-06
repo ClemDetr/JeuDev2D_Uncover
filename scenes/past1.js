@@ -20,11 +20,11 @@ function init() {
         cursor()
 
         const toPast0 = add([
-            rect(width()*0.2,height()*0.8,{
+            rect(width()*0.1,height()*0.8,{
                 fill : false
             }),
             anchor("center"),
-            pos(width()*0.9,height()*0.5),
+            pos(width()*0.95,height()*0.5),
             area()
         ]);
 
@@ -46,11 +46,11 @@ function init() {
         toPast3.onClick(() => (go('past3')));
 
         const toPast4 = add([
-            rect(width()*0.8,height()*0.2,{
+            rect(width()*0.7,height()*0.1,{
                 fill : false
             }),
             anchor("center"),
-            pos(width()*0.5,height()*0.9),
+            pos(width()*0.5,height()*0.95),
             area()
         ]);
 
@@ -113,10 +113,10 @@ function init() {
             sprite("npc1"),
             scale(0.2),
             anchor("center"),
-            pos(width() * 0.7, height() * 0.65),
+            pos(width() * 0.616, height() * 0.65),
             area()
         ])
-        
+        onClick(() => {console.log(mousePos(), width(), height())})
         npc.onHover(() => invtry.cursor_pointer = true)
         npc.onHoverEnd(() => invtry.cursor_pointer = false)
         npc.onClick(() => {

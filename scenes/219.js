@@ -53,6 +53,7 @@ function init() {
             
             arche.onClick(() =>(
                 arche.play("open"),
+                invtry.key_arche = false,
                 wait(2, () => {
                     go('past0')
                 })

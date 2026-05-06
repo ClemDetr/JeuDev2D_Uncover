@@ -88,7 +88,7 @@ export function cursor() {
         if (invtry.key_arche || invtry.key_domus) {
         const inventory = add([
             rect(width()*0.3, height()*0.1, {
-                fill : true,
+                fill : false,
                 color : rgb(255,255,255)
             }),
             pos(0,0),
