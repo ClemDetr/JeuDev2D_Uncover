@@ -39,7 +39,7 @@ function init() {
 
         to235.onHover(() => invtry.cursor_pointer = true)
         to235.onHoverEnd(() => invtry.cursor_pointer = false)
-        to235.onClick(() =>(go('235')));
+        to235.onClick(() =>(go('234')));
 
         const toPanD = add([
             rect(width()*0.06,height()*0.1,{

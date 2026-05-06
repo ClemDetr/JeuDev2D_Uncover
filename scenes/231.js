@@ -26,7 +26,7 @@ function init() {
 
         to228.onHover(() => invtry.cursor_pointer = true)
         to228.onHoverEnd(() => invtry.cursor_pointer = false)
-        to228.onClick(() =>(go('228')));
+        to228.onClick(() =>(go('221')));
 
 
         const to230 = add([

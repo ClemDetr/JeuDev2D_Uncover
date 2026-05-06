@@ -16,7 +16,7 @@ function init() {
         cursor()
 
         const to222 = add([
-            rect(width()*0.2,height()*0.2,{
+            rect(width()*0.2,height()*0.4,{
                 fill : false
             }),
             anchor("center"),
@@ -29,7 +29,7 @@ function init() {
         to222.onHoverEnd(() => invtry.cursor_pointer = false)
         to222.onClick(() => (go('222')));
 
-        const to228 = add([
+        const to231 = add([
             rect(width()*0.2,height()*0.8,{
                 fill : false
             }),
@@ -38,16 +38,16 @@ function init() {
             area()
         ]);
 
-        to228.onHover(() => invtry.cursor_pointer = true)
-        to228.onHoverEnd(() => invtry.cursor_pointer = false)
-        to228.onClick(() =>(go('228')));
+        to231.onHover(() => invtry.cursor_pointer = true)
+        to231.onHoverEnd(() => invtry.cursor_pointer = false)
+        to231.onClick(() =>(go('231')));
 
         const to220 = add([
             rect(width()*0.8,height()*0.2,{
             fill : false
             }),
             anchor("center"),
-            pos(width()*0.5,height()*0.9),
+            pos(width()*0.7,height()*0.9),
             area()
         ]);
 

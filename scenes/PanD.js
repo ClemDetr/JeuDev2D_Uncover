@@ -7,13 +7,27 @@ export{
 function init() {
     loadSprite('PanD',"./assets/237-panD.JPG")
     scene('panD', () => {
-        add([
+        const panD = add([
             sprite('PanD',{
                 width : width(),
                 height : height()
             })
         ]);
         cursor()
+
+        panD.add([
+            rect(width(),height()*0.1),
+            anchor("center"),
+            color(0,0,0),
+            pos(width()*0.5,height()*0.05)
+        ])
+        panD.add([
+            text("Beaucoup de lézards sont présents dans les ruines.",{
+                size : 28,
+            }),
+            pos(width()*0.5,height()*0.05),
+            anchor("center")
+        ])
 
         const to239 = add([
             rect(width()*0.7,height()*0.2,{

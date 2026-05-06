@@ -7,13 +7,27 @@ export{
 function init() {
     loadSprite('panA',"./assets/250-panA.JPG")
     scene('panA', () =>{
-    add([
+    const panA = add([
         sprite('panA',{
             width : width(),
             height : height()
         })
     ]);
     cursor()
+
+    panA.add([
+            rect(width(),height()*0.1),
+            anchor("center"),
+            color(0,0,0),
+            pos(width()*0.5,height()*0.05)
+        ])
+    panA.add([
+        text("Les ruines de Lousonna qui sont devenues parc archéologique.",{
+            size : 28,
+        }),
+        pos(width()*0.5,height()*0.05),
+        anchor("center")
+    ])
 
     const toOF = add([
         rect(width()*0.8,height()*0.3,{

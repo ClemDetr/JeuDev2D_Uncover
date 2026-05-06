@@ -26,11 +26,9 @@ import * as PanD from "./scenes/PanD.js";
 import * as LunD from "./scenes/LunD.js";
 import * as LunE from "./scenes/LunE.js";
 import * as scene227 from "./scenes/227.js";
-import * as scene228 from "./scenes/228.js";
 import * as scene230 from "./scenes/230.js";
 import * as scene231 from "./scenes/231.js";
 import * as scene234 from "./scenes/234.js";
-import * as scene235 from "./scenes/235.js";
 import * as scene236 from "./scenes/236.js";
 import * as scene239 from "./scenes/239.js";
 import * as lizard from "./scenes/lizard.js";
@@ -206,11 +204,9 @@ PanE.init();
 LunE.init();
 LunD.init();
 scene227.init();
-scene228.init();
 scene230.init();
 scene231.init();
 scene234.init();
-scene235.init();
 scene236.init();
 scene239.init();
 lizard.init();
@@ -227,4 +223,4 @@ menu.init();
 
 
 // Start the game with go('menu')
-go('past1');
+go('217');

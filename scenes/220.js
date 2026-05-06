@@ -16,7 +16,7 @@ function init() {
         cursor()
 
         const to221 = add([
-            rect(width()*0.2,height()*0.2,{
+            rect(width()*0.2,height()*0.4,{
                 fill : false
             }),
             anchor("center"),
