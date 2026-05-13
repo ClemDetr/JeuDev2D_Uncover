@@ -6,7 +6,7 @@ export{
 
 function init() {
     loadSprite('hand',"assets/hand.png")
-    loadSprite('219',"assets/219.JPG")
+    loadSprite('219',"assets/219.jpg")
     loadSprite('arche',"assets/arche.png",{
                 sliceX : 2,
                 anims:{

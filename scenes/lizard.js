@@ -5,7 +5,7 @@ export{
 }
 
 function init() {
-    loadSprite('lizard',"assets/lizard.JPG")
+    loadSprite('lizard',"assets/lizard.jpg")
     loadSprite('keyArche',"assets/star.png")
     
     scene('lizard', () => {
