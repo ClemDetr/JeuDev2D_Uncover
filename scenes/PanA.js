@@ -22,7 +22,7 @@ function init() {
             pos(width()*0.5,height()*0.05)
         ])
     panA.add([
-        text("Les ruines de Lousonna qui sont devenues parc archéologique.",{
+        text("Les ruines sont très populaires, le collectionneur disparu doit être dans un endroit secret.",{
             size : 28,
         }),
         pos(width()*0.5,height()*0.05),

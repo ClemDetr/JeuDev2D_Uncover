@@ -22,7 +22,7 @@ function init() {
             pos(width()*0.5,height()*0.05)
         ])
     PanC.add([
-        text("Les ruines sont très populaires, le collectionneur disparu doit être dans un endroit secret.",{
+        text("Les ruines de Lousonna sont devenues un parc archéologique.",{
             size : 28,
             width : width()*0.8
         }),
