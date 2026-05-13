@@ -5,8 +5,8 @@ export{
 }
 
 function init() {
-    loadSprite('past1',"./assets/Past1.png")
-    loadSprite('npc1',"./assets/Passant.png")
+    loadSprite('past1',"assets/Past1.png")
+    loadSprite('npc1',"assets/Passant.png")
     
     scene('past1', () => {
         add([

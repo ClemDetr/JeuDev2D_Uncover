@@ -5,7 +5,7 @@ export{
 }
 
 function init() {
-    loadSprite('RP',"./assets/252-RP.JPG")
+    loadSprite('RP',"assets/252-RP.JPG")
     scene('RP', () => {
     add([
         sprite('RP',{

@@ -5,8 +5,8 @@ export{
 }
 
 function init() {
-    loadSprite('domus',"./assets/Domus.png")
-    loadSprite('collectionneur',"./assets/Collectionneur.png")
+    loadSprite('domus',"assets/Domus.png")
+    loadSprite('collectionneur',"assets/Collectionneur.png")
     
     scene('domus', () => {
         add([ 

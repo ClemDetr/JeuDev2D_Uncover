@@ -5,7 +5,7 @@ export{
 }
 
 function init() {
-    loadSprite('EM',"./assets/253-EM.JPG")
+    loadSprite('EM',"assets/253-EM.JPG")
     
     
     scene('menu', () => {

@@ -5,9 +5,9 @@ export{
 }
 
 function init() {
-    loadSprite('hand',"./assets/hand.png")
-    loadSprite('219',"./assets/219.JPG")
-    loadSprite('arche',"./assets/arche.png",{
+    loadSprite('hand',"assets/hand.png")
+    loadSprite('219',"assets/219.JPG")
+    loadSprite('arche',"assets/arche.png",{
                 sliceX : 2,
                 anims:{
                     "open":{from: 0, to: 1}

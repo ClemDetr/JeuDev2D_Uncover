@@ -5,10 +5,10 @@ export{
 }
 
 function init() {
-    loadSprite('Mus1',"./assets/254-Mus1.JPG")
-    loadSprite('letter',"./assets/letter.png")
-    loadSprite('letter2',"./assets/letter2.png")
-    loadSprite('collec',"./assets/profilpicturecollect.png")
+    loadSprite('Mus1',"assets/254-Mus1.JPG")
+    loadSprite('letter',"assets/letter.png")
+    loadSprite('letter2',"assets/letter2.png")
+    loadSprite('collec',"assets/profilpicturecollect.png")
     scene('Mus1', () => {
     add([
         sprite('Mus1',{

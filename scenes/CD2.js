@@ -5,8 +5,8 @@ export{
 }
 
 function init() {
-    loadSprite('cd2',"./assets/CD2.png")
-    loadSprite('femme',"./assets/femmeromaine.png")
+    loadSprite('cd2',"assets/CD2.png")
+    loadSprite('femme',"assets/femmeromaine.png")
     
     scene('cd2', () => {
         add([
