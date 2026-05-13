@@ -39,7 +39,7 @@ function init() {
             collectionneur.add([
                 text("Merci de m'avoir retrouvé ! J'espère que tu as apprécié la visite des ruines et de Lousonna. N'hésite pas à visiter le musée pour en apprendre plus sur l'histoire de la région !", {
                     width : width()*2,
-                    size : 190,
+                    size : 150,
                 }),
                 color(0,0,0),
                 anchor("center"),
