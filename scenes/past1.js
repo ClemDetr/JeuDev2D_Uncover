@@ -116,7 +116,7 @@ function init() {
             pos(width() * 0.616, height() * 0.65),
             area()
         ])
-        onClick(() => {console.log(mousePos(), width(), height())})
+
         npc.onHover(() => invtry.cursor_pointer = true)
         npc.onHoverEnd(() => invtry.cursor_pointer = false)
         npc.onClick(() => {

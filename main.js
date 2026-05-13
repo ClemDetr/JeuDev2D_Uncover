@@ -62,8 +62,8 @@ export function cursor() {
 
     setCursor("none")
 
-    loadSprite("souris","/assets/cursor.png")
-    loadSprite("hand","/assets/hand.png")
+    loadSprite("souris","assets/cursor.png")
+    loadSprite("hand","assets/hand.png")
 
     const cursor = add([
         sprite("souris"),
