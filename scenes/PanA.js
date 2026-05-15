@@ -24,6 +24,7 @@ function init() {
     panA.add([
         text("Les ruines sont très populaires, le collectionneur disparu doit être dans un endroit secret.",{
             size : 28,
+            width : width()*0.8
         }),
         pos(width()*0.5,height()*0.05),
         anchor("center")
