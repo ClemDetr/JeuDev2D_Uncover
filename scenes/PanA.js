@@ -22,8 +22,8 @@ function init() {
             pos(width()*0.5,height()*0.05)
         ])
     panA.add([
-        text("Les ruines sont très populaires, le collectionneur disparu doit être dans un endroit secret.",{
-            size : 28,
+        text("Les ruines sont très populaires, le collectionneur disparu doit être dans un endroit plus caché. Vers la forêt peut-être ?",{
+            size : height()*0.03,
             width : width()*0.8
         }),
         pos(width()*0.5,height()*0.05),

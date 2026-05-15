@@ -55,12 +55,12 @@ function init() {
             toDomus.onClick(() =>{
                 femme = add([
                     sprite('femme'),
-                    scale(0.5),
+                    scale(0.3),
                     anchor("center"),
-                    pos(width()*0.3,height()*0.5)
+                    pos(width()*0.3,height()*0.7)
                 ]),
                 femme.add([
-                    rect(width()*0.7,height()*0.3,{
+                    rect(width()*0.8,height()*0.5,{
                         fill : true
                     }),
                     color(255,255,255),
@@ -68,8 +68,8 @@ function init() {
                 ]),
                 femme.add([
                     text("Tu peux bien essayer d'entrer dans la demeure mais la porte est fermée à clé. Il devrait y en avoir une quelque part dans l'entrepôt.", {
-                        width : width()*0.7,
-                        size : 40,
+                        width : width()*0.78,
+                        size : height()*0.08,
                         z : 10
                     }),
                     color(0,0,0),
