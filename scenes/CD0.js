@@ -44,7 +44,7 @@ function init() {
             keyDomus.onHoverEnd(() => invtry.cursor_pointer = false)
             
             keyDomus.onClick(() => {
-                invtry.key_domus = 1
+                invtry.key_domus = true
                 keyDomus.destroy()
             });
         }

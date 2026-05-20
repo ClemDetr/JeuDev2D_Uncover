@@ -85,17 +85,16 @@ export function cursor() {
 
         if (invtry.key_arche || invtry.key_domus) {
         const inventory = add([
-            rect(width()*0.3, height()*0.1, {
-                fill : false,
-                color : rgb(255,255,255)
-            }),
+            rect(width()*0.3+5, height()*0.1),
+            color(0,0,0),
+            opacity(0.3),
             pos(0,0),
         ])
         if (invtry.key_arche) {
             inventory.add([
                 text("Inventaire : clé d'arche",{
+                    width : width()*0.3 - 10,
                     size : 20,
-                    color : rgb(0,0,0)
                 }),
                 pos(5,5),
                 z(800)
@@ -103,8 +102,8 @@ export function cursor() {
         }else if (invtry.key_domus) {
             inventory.add([
                 text("Inventaire : clé de domus",{
+                    width : width()*0.3 - 10,
                     size : 20,
-                    color : rgb(0,0,0)
                 }),
                 pos(5,5),
                 z(800)
@@ -223,4 +222,4 @@ menu.init();
 
 
 // Start the game with go('menu')
-go('menu');
+go('past0');

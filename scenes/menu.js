@@ -42,7 +42,9 @@ function init() {
         ])
         cursor()
 
-        menu.onClick(() =>(go('EM')));
+        menu.onClick(() =>{
+            go('EM')
+        });
 
     
     });

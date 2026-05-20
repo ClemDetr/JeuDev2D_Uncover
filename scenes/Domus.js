@@ -20,7 +20,7 @@ function init() {
 
         const collectionneur = add([
             sprite('collectionneur'),
-            scale(0.2),
+            scale(0.4),
             anchor("center"),
             area(),
             pos(width()*0.3,height()*0.5)
@@ -30,7 +30,7 @@ function init() {
         collectionneur.onHoverEnd(() => invtry.cursor_pointer = false)
         collectionneur.onClick(() => {
             collectionneur.add([
-                rect(width()*2.5, height()*4,{
+                rect(width(), height()*0.6,{
                         fill : true
                 }),
                 anchor("center"),
@@ -38,12 +38,12 @@ function init() {
             ]),
             collectionneur.add([
                 text("Merci de m'avoir retrouvé ! J'espère que tu as apprécié la visite des ruines et de Lousonna. N'hésite pas à visiter le musée pour en apprendre plus sur l'histoire de la région !", {
-                    width : width()*2,
-                    size : height()*0.3,
+                    width : width(),
+                    size : height()*0.08,
                 }),
                 color(0,0,0),
                 anchor("center"),
-                pos(collectionneur.width*2,height()*0.5)
+                pos(collectionneur.width*2+5,height()*0.5)
             ]),
             wait(10, () => {
                 collectionneur.destroy()

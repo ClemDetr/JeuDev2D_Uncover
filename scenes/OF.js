@@ -7,12 +7,30 @@ export{
 function init() {
     loadSprite('OF',"assets/249-OF.jpg")
     scene('OF', () => {
-    add([
+    const of =add([
         sprite('OF',{
             width : width(),
             height : height()
         })
     ]);
+    of.add([
+            rect(width()*0.3, height()*0.1, {
+                fill : true
+            }),
+            color(192,173,80),
+            anchor("center"),
+            pos(width()*0.7,height()*0.3-2)
+        ])
+    of.add([
+        text("Des panneaux d'informations sont dispersés dans les ruines. Clique sur eux pour en savoir plus !",{
+            size : height()*0.025,
+            width : width()*0.25,
+            align : "center",
+        }),
+        color(0,0,0),
+        anchor("center"),
+        pos(width()*0.7,height()*0.3)
+    ])
     cursor()
 
     const toRP = add([

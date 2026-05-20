@@ -111,7 +111,7 @@ function init() {
 
         const npc = add([
             sprite("npc1"),
-            scale(0.2),
+            scale(0.4),
             anchor("center"),
             pos(width() * 0.616, height() * 0.65),
             area()
