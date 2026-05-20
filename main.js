@@ -71,9 +71,30 @@ export function cursor() {
         z(999),
         fixed()
     ])
-
-    
-    
+    const inventory = add([
+            rect(width()*0.3+5, height()*0.1),
+            color(0,0,0),
+            opacity(0),
+            pos(0,0),
+    ])
+    inventory.add([
+                text("Inventaire : clé d'arche",{
+                    width : width()*0.3 - 10,
+                    size : 20,
+                }),
+                opacity(0),
+                pos(5,5),
+                z(800)
+    ])
+    inventory.add([
+                text("Inventaire : clé de domus",{
+                    width : width()*0.3 - 10,
+                    size : 20,
+                }),
+                opacity(0),
+                pos(5,5),
+                z(800)
+    ])
     onUpdate(() =>{
         cursor.pos = mousePos()
     
@@ -82,35 +103,25 @@ export function cursor() {
         } else {
             cursor.use(sprite("souris"))
         }
-
         if (invtry.key_arche || invtry.key_domus) {
-        const inventory = add([
-            rect(width()*0.3+5, height()*0.1),
-            color(0,0,0),
-            opacity(0.3),
-            pos(0,0),
-        ])
-        if (invtry.key_arche) {
-            inventory.add([
-                text("Inventaire : clé d'arche",{
-                    width : width()*0.3 - 10,
-                    size : 20,
-                }),
-                pos(5,5),
-                z(800)
-            ])
-        }else if (invtry.key_domus) {
-            inventory.add([
-                text("Inventaire : clé de domus",{
-                    width : width()*0.3 - 10,
-                    size : 20,
-                }),
-                pos(5,5),
-                z(800)
-            ])
+            inventory.opacity = 0.3
+        }else{
+            inventory.opacity = 0
         }
-    }
-    })
+        
+        if (invtry.key_arche) {
+            inventory.children[0].opacity = 1
+        }else{
+            inventory.children[0].opacity = 0
+        }
+
+        if (invtry.key_domus) {
+            inventory.children[1].opacity = 1
+        }else{
+            inventory.children[1].opacity = 0
+        }
+        }
+    )
 }
 
 export function startDialogue(data) {
@@ -222,4 +233,4 @@ menu.init();
 
 
 // Start the game with go('menu')
-go('past0');
+go('menu');
